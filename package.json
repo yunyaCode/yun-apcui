@@ -1,6 +1,6 @@
 {
   "name": "apc-ui",
-  "version": "1.0.1",
+  "version": "1.0.9",
   "description": "基于webpack4的apc-ui项目",
   "main": "lib/apc-ui.umd.min.js",
   "files": [
