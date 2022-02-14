@@ -193,7 +193,7 @@ export default {
 
         if (!websocket) {
           // websocket = new WebSocket("wss://localhost:8088/edu/chat"); // 获得WebSocket对象
-          websocket = new WebSocket("wss://wss-edu.dingtax.cn/edu/chat"); // 获得WebSocket对象
+          websocket = new WebSocket("wss://wss-edu.yunya.cn/edu/chat"); // 获得WebSocket对象
           this.$store.dispatch("webSocket", {
             id: this.roomId,
             webSocket: websocket,

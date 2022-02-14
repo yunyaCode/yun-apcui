@@ -21,9 +21,9 @@
 .P.apply .C.type .panel .tip{display:block;width:auto;margin:rem(30) auto;padding:rem(10) rem(20);font-size:rem(14);line-height:2;border-radius:rem(3);background:#F5F5F5;}
 .P.apply .C.type .panel .tip .fn{font-size:inherit;padding:0 rem(5);color:#000;}
 
-.P.apply .C.type.dingtax .L{padding-top:rem(60);}
-.P.apply .C.type.dingtax .flex{flex-direction:column;}
-.P.apply .C.type.dingtax .flex .title{margin-top:0;}
+.P.apply .C.type.yunya .L{padding-top:rem(60);}
+.P.apply .C.type.yunya .flex{flex-direction:column;}
+.P.apply .C.type.yunya .flex .title{margin-top:0;}
 
 .P.apply .C .L{min-height:100%;padding-top:rem(80)}
 // .C.edit .L .form{padding-top:rem(100);}
@@ -35,7 +35,7 @@
 .P.apply .C.user .H .txt:before{content:"老师入驻，以个人名义发布课程"}
 .P.apply .C.org .H .txt:before{content:"学校入驻，以学校名义发布课程"}
 .P.apply .C.bind .H .txt:before{content:"是否关联创建"}
-.P.apply .C.dingtax .H .txt:before{content:"选择需要关联的丁税宝虚拟组织"}
+.P.apply .C.yunya .H .txt:before{content:"选择需要关联的丁税宝虚拟组织"}
 
 .P.create .C.org .H .txt:before{content:"新建学校"}
 .P.create .C.user .H .txt:before{content:"新建个体"}

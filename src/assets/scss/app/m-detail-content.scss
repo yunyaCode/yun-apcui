@@ -313,8 +313,8 @@
 .P.admin.content .mlist.form .item.author:before{content:"发布者"}
 .P.admin.content .mlist.form .item.category:before{content:"内容标签（选填）"}
 .P.admin.content .mlist.form .item.tags:before{content:"标签（选填）"}
-// .P.admin.content .mlist.form .item.category.dingtax:before{content:""}
-.P.admin.content .mlist.form .item.category.dingtax:before{content:"丁税宝企业标签（选填）"}
+// .P.admin.content .mlist.form .item.category.yunya:before{content:""}
+.P.admin.content .mlist.form .item.category.yunya:before{content:"丁税宝企业标签（选填）"}
 .P.admin.content .mlist.form .item.push:before{content:"直播推流地址";color:#D9A213;}
 .P.admin.content .mlist.form .item.created:before {content: "创建时间" !important;}
 .P.admin.content.live .mlist.form .item.time:before{content:"直播时间"}
@@ -635,7 +635,7 @@
 .P.edit.admin .attachment.pic .add .icon:after{content:"上传文档";}
 .P.edit.admin .attachment.pic .to{position:absolute;top:0;left:0;width:100%;height:100%;}
 
-.P.edit.admin .L .category .to,.P.edit.admin .L .dingtax .to{position:absolute;z-index:1;top:0;left:0;width:100%;height:100%;}
+.P.edit.admin .L .category .to,.P.edit.admin .L .yunya .to{position:absolute;z-index:1;top:0;left:0;width:100%;height:100%;}
 
 .P.edit.admin .apc-textarea{width:rem(600);}
 .P.edit.admin .category{width:rem(650);}
@@ -664,8 +664,8 @@
 .P.admin.content .L .tags .name:hover .del{display:block;}
 .P.admin.content .L .tags .add:hover{box-shadow:0 0 rem(30) #DDD;background:#FFF;}
 .P.admin.content .L .tags .add:after{content:"添加标签";}
-.P.edit.admin .L .category.dingtax.s1 label:before{content:"";}
-.P.edit.admin .L .category.dingtax.s1 label:after{content:"征纳沟通平台企业公共标签";}
+.P.edit.admin .L .category.yunya.s1 label:before{content:"";}
+.P.edit.admin .L .category.yunya.s1 label:after{content:"征纳沟通平台企业公共标签";}
 
 .P.edit.admin .datetime.s1{overflow:hidden;width:rem(400);height:rem(225);border:0;transition:all .4s}
 .P.edit.admin .datetime .apc-toast{top:auto;bottom:rem(20);width:rem(180);height:rem(26);margin:0 0 0 rem(-90);padding:rem(3) rem(10);color:#FFF;text-align:center;letter-spacing:rem(1);border-radius:rem(30);background:#E60000;}
@@ -1189,10 +1189,10 @@
 .P.edit.admin .C.ddlive .mProcess.create.done .name:before{content:"直播信息同步成功";}
 .P.edit.admin .C.ddlive .mProcess.create .tip:after{content:"同步创建直播，用于承载群直播数据以及直播回放";}
 
-.P.edit.admin .C.ddlive .mProcess.dingtax .name:before{content:"同步用户信息";}
-.P.edit.admin .C.ddlive .mProcess.dingtax.ing .name:before{content:"正在同步用户信息";}
-.P.edit.admin .C.ddlive .mProcess.dingtax.done .name:before{content:"用户信息同步成功";}
-.P.edit.admin .C.ddlive .mProcess.dingtax .tip:after{content:"处理用户数据的去重，逐一关联企业信息与部门归属";}
+.P.edit.admin .C.ddlive .mProcess.yunya .name:before{content:"同步用户信息";}
+.P.edit.admin .C.ddlive .mProcess.yunya.ing .name:before{content:"正在同步用户信息";}
+.P.edit.admin .C.ddlive .mProcess.yunya.done .name:before{content:"用户信息同步成功";}
+.P.edit.admin .C.ddlive .mProcess.yunya .tip:after{content:"处理用户数据的去重，逐一关联企业信息与部门归属";}
 
 .P.edit.admin .C.ddlive .mProcess.syncEnt .name:before{content:"同步企业信息";}
 .P.edit.admin .C.ddlive .mProcess.syncEnt.ing .name:before{content:"正在同步企业信息";}

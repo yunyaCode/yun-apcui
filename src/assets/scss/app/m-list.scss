@@ -26,8 +26,8 @@
 .mlist .item .edit{display:none;position:relative;z-index:1;margin-left:rem(10);padding:rem(2) rem(5);border:1px solid #DDD;border-radius:rem(3)}
 .mlist .item a.bind{display:block;z-index:1;width:rem(20);height:rem(20);}
 .mlist .item a.bind.d path{fill:#CCC;}
-.mlist .item a.bind.dingtax{width:auto;padding:rem(1) rem(5);border:1px solid #DDD;border-radius:rem(3);}
-.mlist .item a.bind.dingtax:before{content:"去绑定";}
+.mlist .item a.bind.yunya{width:auto;padding:rem(1) rem(5);border:1px solid #DDD;border-radius:rem(3);}
+.mlist .item a.bind.yunya:before{content:"去绑定";}
 .mlist .tb .add{position:absolute;z-index:1;top:50%;left:rem(20);width:rem(20);height:rem(20);transform:translate(0,-50%);border-radius:rem(20);background:$color_one;fill:#FFF;}
 .mlist .tb .tag .add,.mlist .tb .message .add{background:none;fill:#CCC;}
 .mlist .tb .tag.c .add,.mlist .tb .message.c .add,.mlist .tb .note.c .add{background:none;fill:$color_one;}
@@ -320,21 +320,21 @@
 .mlist.table.user .tb .content span{display:block;padding-right:rem(10);font-size:rem(14);line-height:1.5;}
 .mlist.table .tb .org span{display:block;line-height:1.5;}
 .mlist.table .mUser .name.td{padding-left:0;}
-.mlist.table .dingtax.td .txt{line-height:rem(50);@extend %text_overflow;}
+.mlist.table .yunya.td .txt{line-height:rem(50);@extend %text_overflow;}
 .mlist.table .tb .adminer{display:block;line-height:rem(50);}
 .mlist.table .tb .adminer{padding-left:calc(1.5% + 1.875rem);}
 .mlist.table .tb.mMessage .adminer{padding-left:1.5%;}
-.mlist.table .tb .dingtax{z-index:3;}
-.mlist.table .tb .adminer .txt,.mlist.table .tb .dingtax .txt{display:inline-block;position:relative;z-index:11;width:100%;height:90%;@extend %text_overflow;}
-.mlist.table .tb .adminer .name,.mlist.table .tb .dingtax .name{position:relative;padding:rem(2) rem(3);}
-.mlist.table .tb .adminer .name .del,.mlist.table .tb .dingtax .name .del{display:none !important;position:absolute;top:rem(-5);right:rem(-5);width:rem(14);height:rem(14);padding:0;}
-.mlist.table .tb .dingtax .name .del{left:rem(-12);}
-.mlist.table .tb .adminer .name .del .icon,.mlist.table .tb .dingtax .name .del .icon{width:rem(14);height:rem(14);}
-.mlist.table .tb .adminer .txt:hover,.mlist.table .tb .dingtax .txt:hover{z-index:12;overflow:visible;width:auto;background:#F5F5F5;}
+.mlist.table .tb .yunya{z-index:3;}
+.mlist.table .tb .adminer .txt,.mlist.table .tb .yunya .txt{display:inline-block;position:relative;z-index:11;width:100%;height:90%;@extend %text_overflow;}
+.mlist.table .tb .adminer .name,.mlist.table .tb .yunya .name{position:relative;padding:rem(2) rem(3);}
+.mlist.table .tb .adminer .name .del,.mlist.table .tb .yunya .name .del{display:none !important;position:absolute;top:rem(-5);right:rem(-5);width:rem(14);height:rem(14);padding:0;}
+.mlist.table .tb .yunya .name .del{left:rem(-12);}
+.mlist.table .tb .adminer .name .del .icon,.mlist.table .tb .yunya .name .del .icon{width:rem(14);height:rem(14);}
+.mlist.table .tb .adminer .txt:hover,.mlist.table .tb .yunya .txt:hover{z-index:12;overflow:visible;width:auto;background:#F5F5F5;}
 .mlist.table .tb .adminer.tag .txt:hover,.mlist.table .tb .adminer.message .txt:hover{background:#FFF;}
-.mlist.table .tb .adminer .txt:hover .name,.mlist.table .tb .dingtax .txt:hover .name{margin-left:rem(5);}
+.mlist.table .tb .adminer .txt:hover .name,.mlist.table .tb .yunya .txt:hover .name{margin-left:rem(5);}
 .mlist.table .tb .adminer.message .txt:hover .name{margin:0;}
-.mlist.table .tb .adminer .txt:hover .del, .mlist.table .tb .dingtax .txt:hover .del{display:block !important;}
+.mlist.table .tb .adminer .txt:hover .del, .mlist.table .tb .yunya .txt:hover .del{display:block !important;}
 // .mlist.table .tb .adminer .txt:hover{z-index:1;background:#F5F5F5;}
 
 .mlist.table .tb.tr .name .txt{z-index:12;cursor:pointer;}
@@ -723,8 +723,8 @@
 
 .PC .mlist.column{padding:rem(20);}
 
-.ADMIN .mArea.th .dingtax .txt:before{content:"绑定丁税宝";}
-.area_0133000000.ADMIN .mArea.th .dingtax .txt:before{content:"绑定征纳沟通平台";}
+.ADMIN .mArea.th .yunya .txt:before{content:"绑定丁税宝";}
+.area_0133000000.ADMIN .mArea.th .yunya .txt:before{content:"绑定征纳沟通平台";}
 
 .mlist.table .mC .apc-btn.code{visibility: hidden;}
 .mlist.table .mC:hover .code.td .apc-btn.code,.mlist.table .mC .code.td .apc-btn.code.c{visibility: inherit;}

@@ -32,9 +32,9 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/edu': {
-        // target: 'https://edu-pre.dingtax.cn',
-        // target: 'https://edu-pre.dingtax.cn',
-        target: 'https://edu-test.dingtax.cn',
+        // target: 'https://edu-pre.yunya.cn',
+        // target: 'https://edu-pre.yunya.cn',
+        target: 'https://edu-test.yunya.cn',
         // target: 'http://30.40.36.27:8080',
         changeOrigin: true,
         pathRewrite: {
