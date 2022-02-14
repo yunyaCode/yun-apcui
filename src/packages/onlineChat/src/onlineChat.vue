@@ -73,12 +73,12 @@
 import loading from "../../../assets/svg/loading";
 import { arrow, reply, user, del, esc } from "../../../assets/svg/index";
 import { text2emoji, emoji } from "../../../assets/svg/emoji";
-import {
-  addChat,
-  chatContent,
-  delChat,
-  openOnline
-} from "../../../../../lib/server/chat";
+// import {
+//   addChat,
+//   chatContent,
+//   delChat,
+//   openOnline
+// } from "../../../../../lib/server/chat";
 import { mapGetters } from "vuex";
 
 export default {
@@ -612,7 +612,7 @@ export default {
 
       return arr;
     },
-    ...mapGetters(["onlineChatUser"])
+    // ...mapGetters(["onlineChatUser"])
   },
 
   // 销毁时关闭通信

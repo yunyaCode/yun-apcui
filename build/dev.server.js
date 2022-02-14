@@ -34,9 +34,9 @@ http.createServer(function (req, res) {
 
         tips:后端服务地址可为 \n
 
-            测试：https://apit-edu.yunya.cn \n
-            预发：https://api-edu-pre.yunya.cn \n
-            生产：https://api-edu.yunya.cn \n
+            测试：https://apit.yunya.cn \n
+            预发：https://api-pre.yunya.cn \n
+            生产：https://api.yunya.cn \n
 
         `);
       }

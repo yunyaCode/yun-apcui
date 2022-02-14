@@ -9,7 +9,7 @@ import Directive from './directive';
 // });
 
 import {install as Apc} from './index';
-// import {install as Apc} from '../versions/edu/libs/apc-ui-edu';
+// import {install as Apc} from '../versions/edu/libs/apc-ui';
 Vue.use(Apc);
 
 // import AMap from 'vue-amap';

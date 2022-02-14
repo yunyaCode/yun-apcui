@@ -26,7 +26,6 @@ import clock from './clock';
 import cloudUpload from './cloudUpload';
 import del from './del';
 import dingTalk from './dingTalk';
-import yunya from './yunya';
 import draft from './draft';
 import esc from './esc';
 import eye from './eye';
@@ -156,7 +155,6 @@ export {
   cloudUpload,
   del,
   dingTalk,
-  yunya,
   draft,
   esc,
   eye,
