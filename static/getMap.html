@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=9c51c614e621d60ff40eb923077f3885&plugin=AMap.Geocoder"></script>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+  var request = location.href.split('?')[1];
+  var lng = request.split('&')[0];
+  var lat = request.split('&')[1];
+  function regeocoder(xy) {  //逆地理编码
+    var geocoder = new AMap.Geocoder({
+      radius: 1000,
+      extensions: "all"
+    });
+    geocoder.getAddress(xy, function(status, result) {
+      if (status === 'complete' && result.info === 'OK') {
+      	localStorage.setItem('geocoderData', JSON.stringify(result));
+      	localStorage.setItem('geocoderDataUpdate', 1);
+      }
+    });
+  }
+  regeocoder([lng, lat]);
+</script>
+</html>

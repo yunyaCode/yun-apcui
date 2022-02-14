@@ -1,0 +1,27 @@
+﻿
+@import "global";
+@import "variable";
+
+html{font-size:16px;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html,body,.A,.M,.P,.C,.U{height:100%;}
+a{color:$color_one;cursor:pointer;-webkit-user-select:none;}
+img{border:0;}
+
+.none{display:none !important;}
+
+.process{position:absolute;top:50%;left:50%;width:rem(320);transform:translate(-50%,-50%);text-align:center;}
+.process .icon{display:block;width:rem(100);height:rem(100);margin:0 auto;border-radius:rem(100);border:1px solid $color_green;fill:$color_green;}
+.process .txt:before{display:block;text-align:center;margin:rem(30) auto;font-size:rem(20);letter-spacing:rem(2);color:$color_green;}
+
+.process .txt:before{content:"充值处理中，请稍候"}
+.process.done .txt:before{content:"充值已完成，请返回应用";color:$color_green;}
+.process.done .icon{border-color:$color_green;}
+.process.done path{fill:$color_green;}
+// .process.done.wechat .txt:before{content:"充值已完成，请返回微信"}
+// .process.done.wechat .txt:before{content:"充值已完成，请返回微信"}
+.process .icon{padding:rem(20);border:1px solid #CCC;}
+.process .txt:before{color:#FF7F00}
+.process path{fill:#CCC;}
+.process .cancel{display:inline-block;padding:rem(10) rem(15);cursor:pointer;color:#999;border-radius:rem(5)}
+.process .cancel:before{content:"取消返回";font-size:rem(16);letter-spacing:rem(2)}
+.process .cancel:active{color:#FFF;background:#000;}

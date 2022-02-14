@@ -1,0 +1,95 @@
+﻿
+@import "variable";
+
+.M.category.view .H>.txt:before{content:"选择分类"}
+.M.category.edit .H>.txt:before{content:"编辑分类"}
+.M.category.dingtax.view .H>.txt:before{content:""}
+.M.category.dingtax.view .H>.txt:after{content:"征纳沟通平台企业公共标签"}
+
+.M.category .B{height:rem(400)}
+.M.category .L{position:static;}
+
+// .M.category .mlist{padding:rem(60) rem(20) 0}
+.M.category .mType{clear:left;width:rem(1000);margin:rem(10) auto;@extend %clearfloat}
+.M.category .mType .primary{margin-right:rem(10);}
+.M.category .mType .primary:after{content:"：";}
+.M.category .mType .secondary{margin-right:rem(10)}
+.M.category .mType .type{position:relative;float:left;}
+.M.category .mType .txt,.M.category.edit .mType.default .txt{display:inline-block;padding:rem(3) rem(5);font-size:rem(16);border:1px solid transparent;border-radius:rem(3);outline:0;}
+.M.category .mType .to,.M.category.edit .mType.default .to{position:absolute;top:0;left:0;width:100%;height:100%;}
+.M.category .mType .to .icon{position:absolute;top:rem(-4);left:rem(-4);width:rem(16);height:rem(16);fill:$color_one;}
+.M.category .mType .del{display:none;position:absolute;top:rem(-5);right:rem(10);width:rem(15);height:rem(15);border-radius:rem(15);background:#000;fill:#FFF;}
+.M.category .mType .type:hover .del{display:block;}
+.M.category .mType .del:active{background:#E60000;}
+.M.category .mType .secondary .del{right:rem(-5);}
+.M.category .mType .add{position:relative;float:left;width:rem(30);height:rem(30);border-radius:rem(30);fill:$color_one;}
+.M.category .mType .add:active{background:$color_one;fill:#FFF;}
+.M.category .mo .create{color:#FF7F00;fill:#FF7F00;}
+.M.category .mo .create:active{color:#FFF;background:#FF7F00;fill:#FFF;}
+.M.category .mo .edit{color:#FF7F00;fill:#FF7F00;}
+.M.category .mo .edit:active{color:#FFF;background:#FF7F00;fill:#FFF;}
+
+.M.category .mType .type.new .txt{min-width:rem(60);height:rem(30)}
+.M.category .mType .primary.new .txt:before{content:"一级类别";color:#999;}
+.M.category .mType .secondary.new .txt:before{content:"二级类别";color:#999;}
+.M.category .mType .type.t .txt:before{display:none;}
+
+.M.category.edit .mType .txt{padding:rem(3) rem(10);border-color:#DDD;}
+.M.category.edit .mType .to{display:none;}
+.M.category.edit .mType.default .txt{color:#CCC;}
+
+.M.category .mo{position:relative;width:rem(1000);margin:rem(50) auto;}
+.M.category .mo .apc-btn{float:left;margin-right:rem(20);padding:0 rem(10) 0 rem(5);letter-spacing:0;}
+.M.category .mo .apc-btn .icon{width:rem(36);height:rem(36);margin-right:rem(0);border-radius:rem(30)}
+.M.category.view .mo .apc-btn.edit .icon{padding:rem(9);}
+.M.category.view .mo .apc-btn.done .txt:before{content:"确定";}
+.M.category.view .mo .apc-btn.edit .txt:before{content:"编辑"}
+.M.category.edit .mo .apc-btn.done .txt:before{content:"完成"}
+.M.category.edit .mo .apc-btn.create .txt:before{content:"创建"}
+
+.M.category.view .mType .add,.M.category.view .mo .create,.M.category.view .mType .del,.M.category.edit .mo .edit{display:none;}
+.M.category.view .mType .c .txt{color:$color_one;border-color:$color_one;}
+
+@media screen and (max-width:2732px) and (-webkit-min-device-pixel-ratio:1.5) { //iPad Pro
+}
+@media screen and (max-width:2732px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro H 1366*1024
+}
+@media screen and (max-width:2048px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro V 1024*1366
+}
+@media screen and (max-width:2048px) and (-webkit-min-device-pixel-ratio:1.5) { // iPad
+}
+@media screen and (max-width:2048px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad H 1024*768
+}
+@media screen and (max-width:1536px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad V 768*1024
+}
+@media (min-resolution:200dpi), screen and (max-width:1440px) and (-webkit-min-device-pixel-ratio:1.5) and (orientation:portrait){ //Android 1440p 1440*2560
+  .M.category .B{top:0;right:0;width:80%;height:100%;}
+  .M.category .H{display:none;}
+  .M.category .mlist{padding:rem(10) !important}
+  .M.category .mType{width:100%;margin-top:0;}
+  .M.category .mType .primary{display:block;float:none;}
+  .M.category .mType .primary:after{display:none;}
+  .M.category .mType .primary .txt{font-size:rem(14);color:#999;padding:rem(3) 0;}
+  .M.category .mType .secondary{width:50%;height:rem(40);margin:0;border:rem(5) solid transparent;}
+  .M.category .mType .secondary .txt{width:100%;height:100%;display: flex;justify-content: center;align-items: center;font-size:rem(14);background:#F5F5F5;}
+
+  .M.category.view .mo{position:absolute;bottom:0;width:100%;margin:0;}
+  .M.category.view .mo .apc-btn{display:none;}
+  .M.category.view .mo .apc-btn.done{display:block;width:100%;display: flex;justify-content: center;align-items: center;font-size:rem(16)}
+}
+@media screen and (max-width:1080px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 1080p 1080*1920
+}
+@media screen and (max-width:828px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6+ 414
+}
+@media screen and (max-width:786px) and (-webkit-min-device-pixel-ratio:1.5){ //
+}
+@media screen and (max-width:768px) and (-webkit-min-device-pixel-ratio:1.5){ //iPad
+}
+@media screen and (max-width:750px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6 375
+}
+@media screen and (max-width:720px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 720p 720*1280
+}
+@media screen and (max-width:640px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone5 320
+}
+
+

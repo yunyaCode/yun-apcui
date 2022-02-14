@@ -1,0 +1,125 @@
+﻿
+@import "../variable";
+
+org_idFuMZXbDYxPd1ECZrU6Ttcp
+.H,.N{/*display:inline-block;*/z-index:12;width:100%;height:rem(60); padding-left:rem(20); line-height:rem(60);font-size:rem(20);background:rgba(255,255,255,.95);}
+// .iPhone .H,.iPad .H,.Mac .H,.iPhone .N,.iPad .N,.Mac .N{border:0;background:rgba(255,255,255,.5);-webkit-backdrop-filter:saturate(180%) blur(rem(20));backdrop-filter:saturate(180%) blur(rem(20))}
+.H:before,.N:before{content:"";position:absolute;top:rem(20);left:0;width:rem(3);height:rem(20);background:$color_one;}
+.H.b,.N.b{padding-left:rem(75);background:none;}
+.H.b:before,.N.b:before{display:none;}
+.C.list.content.course .H.b{padding-left:rem(10);}
+.H .txt,.N .txt{float:left;display:inline-block;margin-top:rem(16);padding-right:rem(10);font-size:inherit;@extend %text_overflow;}
+.H .back,.N .back,.N .close,.F .back{position:absolute;z-index:20;top:0;left:0;width:rem(60);height:rem(60);fill:$color_one;stroke:#F5F5F5;stroke-width:2px;}.N .close{stroke-width:0;}
+.H .back:after,.N .back:after,.N .close:after,.F .back:after{content:"";position:absolute;top:rem(20);right:rem(-1);width:1px;height:rem(20);background:#DDD;}
+.H .back .icon,.N .back .icon,.N .close .icon,.F .back .icon{position:absolute;bottom:rem(10);left:rem(10);width:rem(40);height:rem(40);padding:rem(9);border-radius:rem(40);background:rgba(245,245,245,.95)}
+.N .close .icon{padding:0;background:none;}
+.H .back:active,.N .back:active,.N .close:active,.F .back:active{background:none;fill:#FFF;stroke:$color_one;stroke-width:rem(2);}.N .close:active{stroke-width:0;}
+.H .back:active .icon,.N .back:active .icon,.N .close:active .icon,.F .back:active .icon{border-color:$color_one;background:$color_one;}
+.H .apc-switch,.N .apc-switch{top:rem(10);width:auto;}
+.H .apc-switch .sw_i,.N .apc-switch .sw_i{width:auto;padding:0 rem(30);font-size:rem(16);}
+
+.H .filter{position:relative;float:left;margin-top:rem(16);margin-left:rem(10);padding:rem(5) rem(10) rem(5);}
+.H .filter .to{position:absolute;top:0;left:0;width:100%;height:100%;border:1px solid #DDD;}
+
+.U .H{position:relative;padding:0;}
+.U .H:before{display:none;}
+
+// .N{display:block;position:absolute;z-index:1;top:0;width:100%;height:rem(50);background:rgba(255,255,255,.95);}
+// .iPhone .N,.iPad .N,.Mac .N{border:0;background:rgba(255,255,255,.5);-webkit-backdrop-filter:saturate(180%) blur(rem(20));backdrop-filter:saturate(180%) blur(rem(20))}
+
+// .N{border-bottom:1px solid rgba(255,255,255,.1);background:none !important;-webkit-backdrop-filter:none !important;backdrop-filter:none !important;}
+.N .link{position:absolute;top:0;width:rem(100);height:rem(60);display:flex;align-items:center;justify-content:center;font-size:rem(16);color:#FFF;}
+.N .link .icon{display:inline-block;width:rem(16);height:rem(16);fill:#FFF;}
+.N .link.left{left:0;}
+.N .link.topicHome:after{content:"专题"}
+.N .link.left .icon{margin-right:rem(5);transform:rotate(-90deg)}
+.N .link.right{right:0;}
+.N .link.me:before{content:"我的"}
+.N .link.setting:before{content:"设置"}
+.N .link.courseHome.right:before,.N .link.courseHome.left:after{content:"首页"}
+.N .link.backHome.left:after{content:"返回"}
+.N .link.right .icon{margin-left:rem(5);transform:rotate(90deg)}
+.N .link.DailyTED{left:50%;width:rem(120);transform:translate(-50%,0)}
+.N .link.DailyTED .icon{width:rem(50);height:rem(50);}
+
+.F{display:none}
+
+// .F{background:none !important;-webkit-backdrop-filter:none !important;backdrop-filter:none !important;}
+.F .link{position:absolute;bottom:0;width:rem(100);height:rem(50);display:flex;align-items:center;justify-content:center;font-size:rem(16);color:#FFF;}
+.F .link .icon{display:inline-block;width:rem(16);height:rem(16);fill:#FFF;}
+.F .link.left{left:0;}
+.F .link.topicHome:after{content:"专题"}
+.F .link.left .icon{margin-right:rem(5);transform:rotate(-90deg)}
+.F .link.right{right:0;}
+.F .link.me:before{content:"我的"}
+.F .link.setting:before{content:"设置"}
+.F .link.courseHome.right:before,.F .link.courseHome.left:after{content:"首页"}
+.F .link.right .icon{margin-left:rem(5);transform:rotate(90deg)}
+.F .link.DailyTED{left:rem(100);width:rem(120);}
+.F .link.DailyTED .icon{width:rem(50);height:rem(50);}
+.F.color .link{color:$color_one}
+.F.color .link .icon{fill:$color_one}
+
+
+
+.flex{display:flex;min-height:100%;}
+.flex .panel{position:relative;flex-grow:1;@extend %center_flex;border-left:1px solid #DDD;}
+.flex .panel:first-child{border:0;}
+// .flex .item{width:rem(200);}
+.flex .panel .item .icon{position:relative;width:rem(80);height:rem(80);margin:0 auto;padding:rem(20);border-radius:rem(100);border:1px solid #DDD;background:rgba(255,255,255,.5);fill:$color_one;}
+.flex .title{margin-top:rem(15);padding-left:rem(2);font-size:rem(18);letter-spacing:rem(2);line-height:2;text-align:center;color:$color_one;@extend %center_flex;}
+.flex .title p{font-size:inherit;line-height:2;}
+.flex .title .txt{display:block;color:#999;font-size:rem(16);line-height:2;}
+.flex .to{position:absolute;top:0;left:0;width:100%;height:100%;}
+
+
+
+
+@-webkit-keyframes jump{0%{-webkit-transform:none}10%{-webkit-transform:translateY(-10px)}20%{-webkit-transform:none}30%{-webkit-transform:translateY(-5px)}40%{-webkit-transform:none}to{-webkit-transform:none}}
+
+
+@media screen and (max-width:2732px) and (-webkit-min-device-pixel-ratio:1.5) { //iPad Pro
+}
+@media screen and (max-width:2732px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro H 1366*1024
+}
+@media screen and (max-width:2048px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro V 1024*1366
+}
+@media screen and (max-width:2048px) and (-webkit-min-device-pixel-ratio:1.5) { // iPad
+}
+@media screen and (max-width:2048px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad H 1024*768
+}
+@media screen and (max-width:1536px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad V 768*1024
+}
+@media screen and (max-width:1440px) and (orientation:portrait){ //Android 1440p 1440*2560
+// @media (min-resolution:250dpi), screen and (max-width:1440px) and (-webkit-min-device-pixel-ratio:1.5) and (orientation:portrait){ //Android 1440p 1440*2560
+  // .N{display:none}
+  .F{display:block;position:absolute;z-index:1;bottom:0;width:100%;height:rem(50);background:rgba(255,255,255,.95);}
+  .iPhone .F,.iPad .F,.Mac .F{border:0;background:rgba(255,255,255,.5);-webkit-backdrop-filter:saturate(180%) blur(rem(20));backdrop-filter:saturate(180%) blur(rem(20))}
+  // .P .F{z-index:21;height:auto;}
+  // .P .F .link{top:auto;bottom:0;color:$color_one;}
+  // .P .F .link .icon{fill:$color_one;}
+  .F .back{display:none;position:absolute;top:auto;bottom:0;left:0;width:rem(50);height:rem(50);/* margin-left:rem(-120); */fill:$color_one;stroke:#FFF;stroke-width:rem(0.5) !important;background:none;}
+  .F .back:after{display:none;top:rem(15);background:#DDD;}
+  .F .back .icon{position:absolute;top:rem(10);left:rem(10);width:rem(30);height:rem(30);padding:rem(5);border-radius:rem(40);background:none;}
+  // .F .apc-btn{position:absolute;z-index:20;bottom:rem(5);left:50%;height:rem(40);padding:0 rem(20);font-size:rem(18);color:$color_one;letter-spacing:0;display:flex;justify-content:center;align-items:center;transform:translate(-50%,0)}
+  .F .apc-btn .txt{font-size:inherit;}
+  .F .apc-btn:active{color:#FFF;}
+  .F .apc-switch{position:absolute;bottom:rem(10);left:50%;width:rem(200);height:rem(30);transform:translate(-50%,0)}
+  .F .apc-switch .sw_i{font-size:rem(12)}
+}
+@media screen and (max-width:1080px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 1080p 1080*1920
+}
+@media screen and (max-width:828px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6+ 414
+}
+@media screen and (max-width:786px) and (-webkit-min-device-pixel-ratio:1.5){ //
+}
+@media screen and (max-width:768px) and (-webkit-min-device-pixel-ratio:1.5){ //iPad
+}
+@media screen and (max-width:750px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6 375
+}
+@media screen and (max-width:720px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 720p 720*1280
+}
+@media screen and (max-width:640px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone5 320
+}
+
+

@@ -1,0 +1,54 @@
+﻿
+@import "variable";
+
+.miniprogram .back.miniProgram{position: absolute;left: rem(10);bottom: rem(10);width: rem(40);height: rem(40);z-index: 100;background: rgba(#fff,0.5);border-radius: 50%;padding: rem(10);fill: #1A56A8;}
+
+
+@media screen and (max-width:2732px) and (-webkit-min-device-pixel-ratio:1.5) { //iPad Pro
+}
+@media screen and (max-width:2732px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro H 1366*1024
+}
+@media screen and (max-width:2048px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro V 1024*1366
+}
+@media screen and (max-width:2048px) and (-webkit-min-device-pixel-ratio:1.5) { // iPad
+}
+@media screen and (max-width:2048px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad H 1024*768
+}
+@media screen and (max-width:1536px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad V 768*1024
+  .M.file .B{height:100%;}
+  // .M.file .H{display:none;}
+  .M.file .C .U{padding:0;}
+}
+@media (min-resolution:200dpi), screen and (max-width:1440px) and (-webkit-min-device-pixel-ratio:1.5) and (orientation:portrait){ //Android 1440p 1440*2560
+
+  .F>.refresh{left:auto;right:0;bottom:0;width:rem(50);height:rem(50);padding:rem(10);transition:all .4s;transform:none;}
+  .F>.user,.F>.logout{position:absolute;left:auto;right:0;bottom:0;width:rem(50);height:rem(50);padding:rem(10);transform:none;background:none;}
+  // .F>.refresh:before{content:"";position:absolute;top:rem(15);left:0;width:1px;height:rem(20);background:#DDD;}
+  .F>.refresh .txt{display:none;}
+  .F>.refresh .icon{width:rem(30);height:rem(30);padding:rem(5);border-radius:rem(30);}
+  .F>.user .icon,.F>.logout .icon{width:rem(30);height:rem(30);padding:rem(5);border-radius:rem(30);}
+  .F>.user .icon{stroke:#FFF;background:$color_green;}
+  .F>.logout .icon{fill:#FFF;stroke-width:4px;stroke:#E60000;background:#E60000;}
+
+  .F>.refresh.c{font-size:rem(14);color:#FFF;border-color:transparent;border-radius:rem(40);background:none;}
+  .F>.refresh.c .icon{position:absolute;width:100%;height:100%;animation:rotate 1s infinite;}
+  .F>.refresh.c .icon:before{content:"";position:absolute;top:0;left:rem(19);width:rem(2);height:rem(2);border-radius:rem(2);background:#FF7F00;}
+  .F>.refresh.c .icon svg{display:none;}
+  .F>.refresh.c .txt{display: flex;justify-content: center;align-items: center; width:rem(30);height:rem(30);margin:rem(5);padding-top:rem(2);border-radius:rem(30);background:#FF7F00;}
+}
+@media screen and (max-width:1080px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 1080p 1080*1920
+}
+@media screen and (max-width:828px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6+ 414
+}
+@media screen and (max-width:786px) and (-webkit-min-device-pixel-ratio:1.5){ //
+}
+@media screen and (max-width:768px) and (-webkit-min-device-pixel-ratio:1.5){ //iPad
+}
+@media screen and (max-width:750px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6 375
+}
+@media screen and (max-width:720px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 720p 720*1280
+}
+@media screen and (max-width:640px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone5 320
+}
+
+

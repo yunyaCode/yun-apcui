@@ -1,0 +1,354 @@
+﻿
+@import "../variable";
+
+// .C.stats .N{z-index:1;top:auto;bottom:rem(0);height:rem(80);background:rgba(245,245,245,.95);}
+// .C.stats .N .apc-switch{margin:rem(20) auto;}
+// .C.stats .N .apc-switch .curve:before{content:""}
+.C.stats .U{overflow:auto;}
+.C.stats .map .apc-country{width:rem(800);margin:0 auto;}
+.C.stats .map .icon{display:block;}
+.C.stats .map path{fill:#DDD;stroke:#DDD;stroke-width:.5px;}
+//.C.stats .map path:first-child{stroke-width:0;fill:#F5F5F5}
+.C.stats .map path.c{fill:$color_green;}
+.C.stats .map path:hover{cursor:pointer;stroke:#FF7F00;stroke-width:1px;}
+//.C.stats .map path:first-child:hover{fill:transparent;stroke-width:0;}
+.C.stats .L{max-width:rem(1200);margin:0 auto;padding:rem(60) 0;}
+.C.stats .panel{position:relative;display:block;padding-bottom:rem(50);}
+.C.stats .panel .label{position:relative;float:left;margin:0 0 rem(20);padding:rem(10) rem(20);font-size:rem(20);transition:all .4s;}
+.C.stats .panel .label .tp{display:none;}
+.C.stats .panel .label:before{content:"";position:absolute;top:rem(20);left:0;width:rem(10);height:rem(10);border-radius:rem(10);background:#000;}
+.C.stats .panel .apc-switch{z-index:10;float:left;width:auto;height:rem(30);margin:rem(10) rem(20) rem(20) 0;border-radius:rem(5);transition:all .4s;background:#EEE;}
+.C.stats .panel .sw_i{padding:0 rem(20);font-size:rem(12);}
+.C.stats .panel .sw_s{height:100%;box-shadow:0 0 rem(20) #DDD;border-radius:rem(5);border-color:#FFF;background:#FFF;}
+// .C.stats .panel a.sw_i.c{background:#F5F5F5}
+.C.stats .panel a.today:before{content:"今天"}
+.C.stats .panel a.week:before{content:"本周"}
+.C.stats .panel a.month:before{content:"本月"}
+.C.stats .panel a.yesterday:before{content:"昨天"}
+.C.stats .panel a.lastweek:before{content:"上周"}
+.C.stats .panel a.lastmonth:before{content:"上月"}
+.C.stats .panel a.all:before{content:"累计"}
+.C.stats .panel a.income:before{content:"收入"}
+.C.stats .panel a.buyer:before{content:"购买"}
+.C.stats .panel a.pv:before{content:"访问次数"}
+.C.stats .panel a.uv:before{content:"访问人数"}
+.C.stats .panel a.user:before{content:"登录用户"}
+.C.stats .panel a.message:before{content:"消息已读"}
+.C.stats .panel a.checkin:before{content:"签到人数"}
+.C.stats .panel a.dur:before{content:"播放时长"}
+.C.stats .panel a.opinion:before{content:"评论互动"}
+.C.stats .panel a.share:before{content:"分享"}
+.C.stats .panel a.play:before{content:"播放"}
+.C.stats .panel a.ip:before{content:"IP"}
+.C.stats .panel a.live:before{content:"在线"}
+.C.stats .panel a.reg:before{content:"注册"}
+.C.stats .panel a.liveshow:before{content:"直播期间"}
+.C.stats .panel>.data{clear:left;transition:all .4s;@extend %clearfloat;}
+.TAX .C.stats .panel>.data.cost{visibility:hidden;}
+.TAX .C.stats .panel .apc-switch .income,
+.TAX .C.stats .panel .apc-switch .buyer{visibility:hidden;}
+
+
+.C.stats.full .L{max-width:rem(1280);padding-left:rem(0) !important;padding-right:rem(0) !important;}
+.C.stats.full .apc-calendar{width:rem(1280);}
+// .C.stats.full .apc-calendar .month{padding-left:0 !important;padding-right:0 !important;}
+
+.C.stats .L .panel .range{position:relative;float:left;width:auto;margin:rem(10) rem(10) rem(20) rem(0);}
+.C.stats .L .panel .range .apc-input{float:left;width:rem(110);margin:0 rem(10);}
+.C.stats .L .panel .range .apc-input .label{display:none;}
+.C.stats .L .panel .range .apc-btn{position:relative !important;float:left;width:rem(60);height:rem(30);margin:0 rem(10);padding:0;color:#FFF;letter-spacing:0;font-size:rem(14);background:$color_one;}
+.C.stats .L .panel .range .apc-btn:before{content:"查询";}
+.C.stats .L .panel .range .apc-btn.d{background:#999;}
+// .C.stats .L .panel .range .apc-btn:{background:#999;}
+
+.C.stats .L .panel .range.d .to:after,.C.stats .L .panel .apc-switch.d:after{content:"";position:absolute;top:0;right:0;width:rem(14);height:rem(14);border-bottom-left-radius:rem(20);background:url("data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iTG9jayIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNDggNDgiPjxwYXRoIGZpbGw9IiNGRjdGMDAiIGQ9Ik00MC42LDIzaC0yLjR2LTguMWMwLTQtMS41LTcuNy00LjEtMTAuNEMzMS41LDEuNywyOCwwLDI0LDBjLTQsMC03LjUsMS43LTEwLjEsNC40Yy0yLjUsMi43LTQuMSw2LjQtNC4xLDEwLjRWMjNINy40IGMtMSwwLTEuOCwwLjgtMS44LDEuOHYyMS40YzAsMSwwLjgsMS44LDEuOCwxLjhoMzMuMWMxLDAsMS44LTAuOCwxLjgtMS44VjI0LjhDNDIuNCwyMy44LDQxLjYsMjMsNDAuNiwyM3ogTTE2LjYsMTQuOSBjMC0yLjMsMC45LTQuNCwyLjMtNS45QzIwLjIsNy42LDIyLDYuNywyNCw2LjdjMiwwLDMuOCwwLjgsNS4yLDIuM2MxLjQsMS41LDIuMywzLjUsMi4zLDUuOVYyM0gxNi42VjE0Ljl6Ij48L3BhdGg+IDwvc3ZnPgo=") center no-repeat;background-size:60%;}
+
+.C.stats .panel.c .label,.C.stats .panel.c>.apc-switch,.C.stats .panel.c>.range,.C.stats .panel.c .data{filter:blur(10px)}
+.C.stats .panel>.source.ready{opacity:0;transform:scale(.9);}
+.C.stats .panel>.source .B{height:100%;background:none;}
+.C.stats .panel>.source .P{margin:0;border-radius:0;box-shadow:0 0 0;background:none;}
+.C.stats .panel>.source.ready .apc-pie{opacity:0;transform:translate3d(0,0,300px) rotate(-180deg);}
+.C.stats .panel>.source.ready .item{opacity:0;transform:translate(0,100px)}
+.C.stats .panel>.source{top:0;left:0;height:100%;background:none;transition:all .4s;-webkit-perspective:1000;-webkit-perspective-origin:50% 50%;}
+.C.stats .panel>.source .apc-pie{position:absolute;top:50%;left:50%;width:rem(400);height:rem(400);margin:rem(-180) 0 0 rem(-450);transition:all 2s}
+.C.stats .panel>.source .apc-pie canvas{width:100%;height:100%;}
+.C.stats .panel>.source .list{position:absolute;top:50%;left:50%;width:rem(450);height:rem(350);margin:rem(-155) 0 0 rem(0);}
+// .C.stats .panel>.source .title{position:absolute;top:rem(-50);left:0;width:100%;text-align:center;font-size:rem(30);line-height:2}
+.C.stats .panel>.source .H{height:rem(50);padding:rem(10) 0 0 rem(15);line-height:rem(50);font-size:rem(20);background:none;}
+.C.stats .panel>.source .H .n:before{margin-right:rem(10);}
+.C.stats .panel>.source .H .n:after{margin-left:rem(10);}
+.C.stats .panel>.source.today .H .n:before{content:"今天"}
+.C.stats .panel>.source.all .H .n:before{content:"累计"}
+.C.stats .panel>.source.income .H .n:before{content:"累计收入"}
+.C.stats .panel>.source.income .H .n:after{content:"新芽币"}
+.C.stats .panel>.source.buyer .H .n:after{content:"人购买"}
+.C.stats .panel>.source.reserve .H .n:after{content:"人预约"}
+.C.stats .panel>.source.view .H .n:after{content:"次访问"}
+.C.stats .panel>.source.play .H .n:after{content:"次播放"}
+.C.stats .panel>.source.duration .H .n:after{content:"分钟"}
+.C.stats .panel>.source.opinion .H .n:after{content:"条发言"}
+.C.stats .panel>.source.share .H .n:after{content:"次分享"}
+.C.stats .panel>.source.ip .H .n:after{content:"次 IP 访问"}
+.C.stats .panel>.source.user .H .n:after{content:"次登录"}
+.C.stats .panel>.source.live .H .n:after{content:"次观看直播"}
+.C.stats .panel>.source.reg .H .n:after{content:"人新注册"}
+.C.stats .panel>.source.reproduce .H .n:after{content:"次转载"}
+.C.stats .panel>.source.msg .H .n:before{content:""}
+.C.stats .panel>.source.msg .H .all:before{content:"累积向"}
+.C.stats .panel>.source.msg .H .n:after{content:"人已读"}
+.C.stats .panel>.source.msg .H .all:after{content:"企业发送消息，"}
+// .C.stats .panel>.source .H:after{display:block;font-size:rem(14);color:#E60000;content:"（来源为次数统计，不去重复）";letter-spacing:rem(1);}
+.C.stats .panel>.source .H .n{float:left;font-size:inherit;padding:0 rem(10)}
+.C.stats .panel>.source .H .apc-switch{top:0;float:left;margin:0 0 0 rem(10);}
+.C.stats .panel>.source .H .apc-switch .txt{width:auto;margin:0;content:"来源分布"}
+.C.stats .panel>.source .H .apc-switch .source .txt:before{content:"来源分布"}
+.C.stats .panel>.source .H .apc-switch .rank .txt:before{content:"用户排行"}
+.C.stats .panel>.source .C{display:flex;padding:rem(40) 0 0;background:rgba(#F5F5F5,.95);}
+.C.stats .panel>.source .mlist{overflow:auto;width:20%;margin:0 5% 0 0;padding:0 rem(10);display:flex;flex-direction:column;}
+.C.stats .panel>.source .mlist .item{float:left;width:100%;height:rem(40);min-height:rem(40);padding:0;border:0;}
+.C.stats .panel>.source .mlist .item:hover{border:0;}
+// .C.stats .panel>.source .mlist .item:last-child{border-bottom:1px solid #DDD;}
+.C.stats .panel>.source .mlist .item .td{height:rem(40);}
+.C.stats .panel>.source .list .item{position:relative;height:rem(50);padding-left:rem(30);@extend %center_flex;transition:all .4s}
+.C.stats .panel>.source .list .item:nth-child(1){transition-delay:100ms}
+.C.stats .panel>.source .list .item:nth-child(2){transition-delay:200ms}
+.C.stats .panel>.source .list .item:nth-child(3){transition-delay:300ms}
+.C.stats .panel>.source .list .item:nth-child(4){transition-delay:400ms}
+.C.stats .panel>.source .list .item:nth-child(5){transition-delay:500ms}
+.C.stats .panel>.source .list .item:nth-child(6){transition-delay:600ms}
+.C.stats .panel>.source .list .item:nth-child(7){transition-delay:700ms}
+.C.stats .panel>.source .list .item:nth-child(8){transition-delay:800ms}
+// .C.stats .panel>.source .list .item:first-child{border-top:1px solid #EEE;}
+.C.stats .panel>.source .list .item .icon{position:absolute;top:0;left:0;width:rem(50);height:rem(50);padding:rem(15)}
+.C.stats .panel>.source .list .item.dd.pc .icon:before{content:"PC";position:absolute;top:rem(3);right:rem(3);width:rem(26);height:rem(26);color:#FFF;border-radius:rem(24);background:#666;@extend %center_flex;transform:scale(.5);}
+// .C.stats .panel>.source .list .item.dd.pc path{fill:#CCC;}
+.C.stats .panel>.source .list .item.alipay .icon{padding:rem(16)}
+.C.stats .panel>.source .list .item.qq .icon{padding:rem(17)}
+.C.stats .panel>.source .list .item.web .icon{padding:rem(16)}
+.C.stats .panel>.source .apc-bar{height:1px!important;border-width:0 rem(20)!important;background:none;}
+.C.stats .panel>.source .apc-bar .cur:before{display:none;}
+.C.stats .panel>.source .apc-bar b.cur{top:rem(-7);right:rem(-25);color:#666;font-size:rem(12)}
+.C.stats .panel>.source .apc-bar .target{display:none;}
+.C.stats .panel>.source .dd .apc-bar i.cur{background:#3296fa;}
+.C.stats .panel>.source .dd.pc .apc-bar i.cur{background:#666;}
+.C.stats .panel>.source .alipay .apc-bar i.cur{background:#1E95D4;}
+.C.stats .panel>.source .wechat .apc-bar i.cur{background:#B2E34B;}
+.C.stats .panel>.source .toutiao .apc-bar i.cur{background:#E0470E;}
+.C.stats .panel>.source .weibo .apc-bar i.cur{background:#D52B2A;}
+.C.stats .panel>.source .qq .apc-bar i.cur{background:#14BAF8;}
+.C.stats .panel>.source .web .apc-bar i.cur{background:#E44C27;}
+
+.C.stats .panel>.source .close{position:absolute;top:rem(-25);right:0;width:rem(50);height:rem(50);}
+
+.C.stats .panel>.source .table{width:100%;margin:0 auto;}
+.C.stats .panel>.source .table .th .td.object:after{content:"购买内容"}
+.C.stats .panel>.source .table .th .td.coin .pay:after{content:"支付金额"}
+.C.stats .panel>.source .table .th .td.coin .original:after{content:"原价"}
+.C.stats .panel>.source .table .th .td.time .pay:after{content:"支付时间"}
+.C.stats .panel>.source .table .th .td.time .order:after{content:"下单时间"}
+.C.stats .panel>.source .table .th .td.user:after{content:"学员"}
+
+.C.stats .panel>.source .table .td .pay{font-size:inherit;}
+.C.stats .panel>.source .table .td .original,.C.stats .panel>.source .table .td .order{position:relative;margin-left:rem(10);padding:rem(7) 0 0 rem(10);color:#CCC;}
+.C.stats .panel>.source .table .td .original:before,.C.stats .panel>.source .table .td .order:before{content:"";position:absolute;top:rem(3);left:0;width:1px;height:rem(20);background:#CCC;transform:rotate(30deg)}
+.C.stats .panel>.source .table .td .name{display:inline-block;padding:rem(2) rem(7);font-size:rem(14);border-radius:rem(3);}
+.C.stats .panel>.source .table .td .name:active{color:#FFF;background:$color_one;}
+
+.C.stats .apc-calendar{width:rem(1000);height:rem(500);margin-bottom:rem(30)}
+// .mStats{display:flex;}
+.mStats{width:100%;margin:0 auto;}
+.mStats .item{position:relative;float:left;width:20%;margin:rem(20) 0 0;padding:rem(35) 0 rem(10) rem(30);}
+.mStats .item>.n{font-size:rem(36);}
+.mStats .item>.n:before{position:absolute;z-index:2;top:rem(10);left:rem(15);padding:0 rem(5);font-size:rem(12);letter-spacing:rem(1);color:#999;}
+// .C.stats .mStats .item>.n:before{background:#FFF;}
+.mStats .item>.n:after{display:inline;padding:0 rem(10);font-size:rem(14);letter-spacing:rem(1);}
+
+.mStats.content{margin:rem(20) 0;border:1px solid #DDD;background:#FFF;}
+.mStats.content .item{width:14.28%;margin:0;}
+.mStats.content .item:hover{box-shadow:0 0 0;border-radius:0;background:rgba(#FFF,1.75);}
+.mStats.content .sLive>.n:before{content:"直播"}
+.mStats.content .item>.n:after{content:""}
+.mStats .sVideo>.n:before{content:"视频"}
+.mStats .sFile>.n:before{content:"文档"}
+.mStats .sTest>.n:before{content:"练习"}
+.mStats .sO2O>.n:before{content:"培训"}
+.mStats .sArticle>.n:before{content:"文章"}
+.mStats .sVote>.n:before{content:"问卷"}
+
+.mStats .sBalance>.n:before{content:"账户余额"}.mStats .sBalance .n:after{content:"新芽币"}
+.mStats .sIncome>.n:before{content:"课程收入"}.mStats .sIncome .n:after{content:"元"}
+.mStats .sBuyer>.n:before{content:"购买人数"}.mStats .sBuyer .n:after{content:"人"}
+.mStats .sReserve>.n:before{content:"预约人数"}.mStats .sReserve .n:after{content:"人"}
+.mStats .sReproduce>.n:before{content:"转载分享"}.mStats .sReproduce .n:after{content:"次"}
+.mStats .sView>.n:before{content:"访问次数"}.mStats .sView .n:after{content:"次"}
+.mStats .sPlay>.n:before{content:"播放次数"}.mStats .sPlay .n:after{content:"次"}
+.mStats .sTime>.n:before{content:"播放时长"}.mStats .sTime .n:after{content:"分钟"}
+.mStats .sOpinion>.n:before{content:"互动发言"}.mStats .sOpinion .n:after{content:"条"}
+.mStats .sShare>.n:before{content:"社交分享"}.mStats .sShare .n:after{content:"次"}
+.mStats .sIP>.n:before{content:"访问IP"}.mStats .sIP .n:after{content:"个"}
+.mStats .sUser>.n:before{content:"登录用户"}.mStats .sUser .n:after{content:"人"}
+.mStats .sUV>.n:before{content:"访问人数"}.mStats .sUV .n:after{content:"人"}
+.mStats .sMessage>.n:before{content:"消息已读"}.mStats .sMessage .n:after{content:"次"}
+.mStats .sCheckin>.n:before{content:"签到人次"}.mStats .sCheckin .n:after{content:"次"}
+.mStats .sLive>.n:before{content:"直播在线"}.mStats .sLive .n:after{content:"人"}
+.mStats .sReg>.n:before{content:"新用户"}.mStats .sReg .n:after{content:"人"}
+
+.mStats .sFollow>.n:before{content:"累计"}.mStats .sFollow .n:after{content:"人"}
+.mStats .sLiveRemind>.n:before{content:"开播提醒"}.mStats .sLiveRemind .n:after{content:"人"}
+.mStats .sVideoRemind>.n:before{content:"回放提醒"}.mStats .sVideoRemind .n:after{content:"人"}
+.mStats .sO2ORemind>.n:before{content:"培训提醒"}.mStats .sO2ORemind .n:after{content:"人"}
+.mStats .sSignupRemind>.n:before{content:"报名提醒"}.mStats .sSignupRemind .n:after{content:"人"}
+.mStats .sCheckinRemind>.n:before{content:"签到提醒"}.mStats .sCheckinRemind .n:after{content:"人"}
+.mStats .sBind>.n:before{content:"累计"}.mStats .sBind .n:after{content:"人"}
+
+.mStats .sOrder>.n:before{content:"订单数"}.mStats .sReg .n:after{content:"人"}
+
+.mStats .sDD>.n:before{content:"来自钉钉"}.mStats .sDD .n:after{content:"次"}
+.mStats .sAlipay>.n:before{content:"来自支付宝"}.mStats .sAlipay .n:after{content:"次"}
+.mStats .sWechat>.n:before{content:"来自微信"}.mStats .sWechat .n:after{content:"次"}
+.mStats .sWeibo>.n:before{content:"来自微博"}.mStats .sWeibo .n:after{content:"次"}
+
+.mStats .sCoupon>.n:before{content:"优惠券"}.mStats .sCouponAmount .n:after{content:"张"}
+.mStats .sCouponRelease>.n:before{content:"上线时间"}.mStats .sCouponDur .n:after{content:""}
+.mStats .sCouponDur>.n:before{content:"有效期"}.mStats .sCouponDur .n:after{content:""}
+.mStats .sCouponAmount>.n:before{content:"发放总量"}.mStats .sCouponAmount .n:after{content:"张"}
+.mStats .sCouponTaken>.n:before{content:"用户领取"}.mStats .sCouponTaken .n:after{content:"张"}
+.mStats .sCouponUseTimes>.n:before{content:"用户使用"}.mStats .sCouponUseTimes .n:after{content:"张"}
+.mStats .sCouponUseValue>.n:before{content:"优惠金额"}.mStats .sCouponUseValue .n:after{content:"元"}
+.mStats .sCouponIncome>.n:before{content:"促进课程销售"}.mStats .sCouponIncome .n:after{content:"元"}
+
+.mStats .sVip>.n:before{content:"会员卡"}.mStats .sVip .n:after{content:"张"}
+.mStats .sVipRelease>.n:before{content:"上线时间"}.mStats .sVipRelease .n:after{content:""}
+.mStats .sVipPV>.n:before{content:"访问次数"}.mStats .sVipPV .n:after{content:"次"}
+.mStats .sVipUV>.n:before{content:"访问人数"}.mStats .sVipUV .n:after{content:"人"}
+.mStats .sVipSell>.n:before{content:"销售数量"}.mStats .sVipSell .n:after{content:"张"}
+.mStats .sVipIncome>.n:before{content:"销售收入"}.mStats .sVipIncome .n:after{content:"元"}
+.mStats .sVipUser>.n:before{content:"购买人数"}.mStats .sVipUser .n:after{content:"人"}
+.mStats .sVipUseTimes>.n:before{content:"使用次数"}.mStats .sVipUseTimes .n:after{content:"次"}
+.mStats .sVipUseValue>.n:before{content:"使用金额"}.mStats .sVipUseValue .n:after{content:"次"}
+
+.mStats .item .to{position:absolute;top:0;left:0;width:100%;height:100%;border:1px solid transparent;border-radius:rem(5)}
+.mStats .item:hover{box-shadow:0 0 rem(30) #DDD;border-radius:0;background:rgba(#FFF,1.75);}
+.mStats .item:hover .n{color:$color_one;}
+// .mStats .item:hover .n:before{color:#333;}
+
+// .C.section .L{padding-top:0;}
+
+// .M.stats.pv .B .H .p.txt:after{content:"访问量";}
+
+.M.stats .pie .U{width:100%!important;height:100%!important;margin:0;}
+.M.stats .pie .L{width:100%;height:100%;}
+.M.stats .chart{width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
+.M.stats .apc-pie{width:rem(400);height:rem(400);@extend %center_flex;}
+.M.stats .apc-pie canvas{width:100%;height:100%;}
+.M.stats .pielist{width:rem(600);height:rem(400);padding-right:rem(50);display:flex;justify-content:center;flex-direction:column;}
+.M.stats .pielist .item{position:relative;height:rem(50);margin:rem(5) 0;padding-left:rem(30);@extend %center_flex;}
+.M.stats .pielist .item .icon{position:absolute;top:0;left:0;width:rem(50);height:rem(50);padding:rem(15)}
+.M.stats .pielist .item.dd.pc .icon:before{content:"PC";position:absolute;top:rem(3);right:rem(3);width:rem(26);height:rem(26);color:#FFF;border-radius:rem(24);background:#666;@extend %center_flex;transform:scale(.5);}
+.M.stats .pielist .item.web .icon{padding:rem(16)}
+.M.stats .pielist .item.other .icon:before{content:"?";width:100%;height:100%;@extend %center_flex;color:#FFF;font-weight:700;border-radius:rem(30);background:#CCC;}
+// .M.stats .pielist .item .WeChatApp{position:absolute;bottom:rem(15);right:rem(15);width:rem(10);height:rem(10);}
+.M.stats .pielist .apc-bar{height:rem(10) !important;border-width:0 rem(20)!important;background:none;}
+.M.stats .pielist .apc-bar .cur:before{display:none;}
+.M.stats .pielist .apc-bar i.cur{border-radius:rem(40);}
+.M.stats .pielist .apc-bar b.cur{top:rem(-6);right:rem(-110);width:rem(100);color:#666;font-size:rem(18);text-align:left;transform:none;}
+.M.stats .pielist .apc-bar .target{display:none;}
+.M.stats .pielist .dd .apc-bar i.cur{background:#4097D4;}
+.M.stats .pielist .dd.pc .apc-bar i.cur{background:#666;}
+.M.stats .pielist .alipay .apc-bar i.cur{background:#1E95D4;}
+.M.stats .pielist .wechat .apc-bar i.cur{background:#B2E34B;}
+.M.stats .pielist .wechatApp .apc-bar i.cur{background:#2BA246;}
+.M.stats .pielist .toutiao .apc-bar i.cur{background:#E0470E;}
+.M.stats .pielist .weibo .apc-bar i.cur{background:#D52B2A;}
+.M.stats .pielist .qq .apc-bar i.cur{background:#14BAF8;}
+.M.stats .pielist .web .apc-bar i.cur{background:#E44C27;}
+.M.stats .pielist .other .apc-bar i.cur{background:#CCC;}
+
+.trafficIN .mlist.table .mModule .name:before{content:"From:　";color:#999;}
+.trafficIN .mlist.table .mModule.th .name:before{content:"";}
+
+.trafficOUT .mlist.table .mModule:nth-child(2){box-shadow:0 0 rem(5) #999 inset;background:#CCC;}
+.trafficOUT .mlist.table .mModule:nth-child(2) .td,
+.trafficOUT .mlist.table .mModule:nth-child(2) .td .cur{color:#FFF;text-shadow:rem(1) rem(1) rem(2) #999;}
+.trafficOUT .mlist.table .mModule:nth-child(2) .td .n{font-size:rem(14);font-weight:400;}
+.trafficOUT .mlist.table .mModule .name:before{content:"To:　";color:#999;}
+.trafficOUT .mlist.table .mModule.th .name:before,
+.trafficOUT .mlist.table .mModule:nth-child(2) .name:before{content:""}
+
+.mlist.table .apc-pie{position:relative;z-index:1;max-width:rem(24);min-width:rem(24);height:rem(24);border-radius:rem(40);}
+.mlist.table .apc-pie canvas{width:100%;height:100%;}
+.mlist.table .mData .n{position:relative;z-index:1;padding:rem(3) rem(5);cursor:pointer;font-weight:400;border-radius:rem(40);}
+// .mlist.table .mData .n:hover{overflow:visible;color:#FFF;background:$color_one;}
+// .mlist.table .mData:nth-child(2) .n:hover{color:#333;background:#FFF;}
+.mlist.table .apc-bar{height:rem(10) !important;border-width:0 rem(50) 0 0!important;background:none;}
+.mlist.table .apc-bar .cur:before{display:none;}
+.mlist.table .apc-bar i.cur{border-radius:rem(40);}
+.mlist.table .apc-bar b.cur{top:rem(-4);right:rem(-105);width:rem(100);color:#666;font-size:rem(14);text-align:left;transform:none;}
+.mlist.table .apc-bar .target{display:none;}
+.mlist.table .dd .apc-bar i.cur{background:$color_dd;}
+.mlist.table .wechat .apc-bar i.cur{background:$color_wechat;}
+.mlist.table .wechatApp .apc-bar i.cur{background:$color_wechatApp;}
+.mlist.table .total .apc-bar i.cur{background:#000;}
+
+
+.M.stats .admin .pN{top:auto;left:0;bottom:0;width:100%;height:0;margin:0;padding:0;background:none;}
+
+.M.stats .admin .pN .apc-switch{position:absolute;top:rem(-60);left:50%;width:auto;height:rem(30);border-radius:rem(5);background:rgba(#DDD,.85);transform:translate(-50%,0);}
+.M.stats .admin .pN .apc-switch .sw_i{padding:0 rem(25);font-size:rem(12);}
+.M.stats .admin .pN .apc-switch .sw_s{box-shadow:0 0 rem(20) #DDD;border-radius:rem(5);border-color:#FFF;background:#FFF;}
+
+
+@media screen and (max-width:2732px) and (-webkit-min-device-pixel-ratio:1.5) { //iPad Pro
+}
+@media screen and (max-width:2732px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro H 1366*1024
+}
+@media screen and (max-width:2048px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro V 1024*1366
+}
+@media screen and (max-width:2048px) and (-webkit-min-device-pixel-ratio:1.5) { // iPad
+}
+@media screen and (max-width:2048px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad H 1024*768
+}
+@media screen and (max-width:1536px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad V 768*1024
+}
+@media screen and (max-width:1440px) and (orientation:portrait){ //Android 1440p 1440*2560
+// @media (min-resolution:250dpi), screen and (max-width:1440px) and (-webkit-min-device-pixel-ratio:1.5) and (orientation:portrait){ //Android 1440p 1440*2560
+  .C.stats .L{padding:rem(100) 0}
+  .C.stats .panel{padding:0;border-width:0;}
+  .C.stats .panel .label{width:100%;height:rem(50);margin-bottom:rem(20)}
+  .C.stats .panel .label:before{display:none;}
+  .C.stats .panel .label .tp{display:block;position:relative;top:rem(-5);float:right;width:rem(80);height:rem(40);color:#666;font-size:rem(14);text-align:center;line-height:rem(40);border-radius:rem(5);background:#F5F5F5;}
+  .C.stats .panel .label .tp .icon{display:inline-block;position:relative;top:rem(3);width:0;height:0;margin-left:rem(3);border:rem(5) solid transparent;border-top-color:#666;}
+  .C.stats .panel>.apc-switch{position:absolute;top:rem(3);right:rem(20);}
+  .C.stats .panel .sw_i{height:rem(40);margin-bottom:1px;}
+  .C.stats .curve .apc-switch,.C.stats .region .apc-switch{display:none;flex-wrap:wrap;width:rem(140);height:auto;}
+  .C.stats .curve .apc-switch.c,.C.stats .region .apc-switch.c{display:flex;}
+
+  .mStats .item{width:33.33%;margin:0;padding-left:rem(20);}
+  .mStats .item > .n{font-size:rem(20);}
+  .mStats .item>.n:before{top:0;font-size:rem(10)}
+  .mStats .item>.n:after{font-size:rem(10)}
+
+  .C.stats .panel > .source .title{font-size:rem(24)}
+  .C.stats .panel>.source .apc-pie{position:relative;top:0;left:0;width:rem(300);height:rem(300);margin:0 auto;transition:all 2s}
+  .C.stats .panel>.source .list{position:relative;top:0;left:0;width:rem(300);height:rem(300);margin:0 auto;}
+
+  .C.stats .apc-calendar{width:rem(300);height:rem(320);}
+
+  .C.stats .map .apc-country{width:80%;}
+}
+@media screen and (max-width:1080px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 1080p 1080*1920
+}
+@media screen and (max-width:828px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6+ 414
+}
+@media screen and (max-width:786px) and (-webkit-min-device-pixel-ratio:1.5){ //
+}
+@media screen and (max-width:768px) and (-webkit-min-device-pixel-ratio:1.5){ //iPad
+}
+@media screen and (max-width:750px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6 375
+}
+@media screen and (max-width:720px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 720p 720*1280
+}
+@media screen and (max-width:640px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone5 320
+}
+
+

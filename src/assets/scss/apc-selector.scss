@@ -1,0 +1,132 @@
+﻿
+@import "variable";
+
+.apc-selector.dingtax .list .H .txt:before{content:"关联丁税宝虚拟组织"}
+.apc-selector.org .list .H .txt:before{content:"选择"}
+.apc-selector.course .list .H .txt:before{content:"选择课程"}
+.apc-selector.file .list .H .txt:before{content:"选择文档"}
+.apc-selector.article .list .H .txt:before{content:"选择文章"}
+.apc-selector.user .list .H .txt:before{content:"选择老师"}
+.apc-selector.user .form .H .txt:before{content:"添加老师"}
+.apc-selector .U{padding:rem(60) 0;}
+// .apc-selector .L>.list{@extend %clearfloat;}
+.apc-selector.user .L>.list{width:rem(1200);margin:0 auto;padding:rem(20) 0;@extend %clearfloat;}
+.apc-selector.user .mU .logo,.apc-selector.user .item .logo{width:rem(50);height:rem(50);margin:rem(20) auto rem(5);border-radius:rem(50);background-size:cover;}
+.apc-selector.user .mU .logo .icon{display:block;width:100%;height:100%;border:1px solid #DDD;padding:rem(12);border-radius:rem(80);fill:none;stroke:$color_one;stroke-width:rem(2)}
+
+.apc-selector .C .f:hover input{ opacity:.9; }
+.apc-selector .item { position:relative;float:left;width:rem(200);height:rem(200);margin:rem(10) rem(20) rem(10) 0;background-size:cover;transition:transform .4s; }
+// .apc-selector .item>.icon{display:none;position:absolute;top:rem(5);left:rem(5);width:rem(20);height:rem(20);border-radius:rem(20);background:$color_green;fill:#FFF;}
+.apc-selector .item.c{outline:1px solid #DDD;box-shadow:0 0 10px #DDD;}
+.apc-selector .item.c>.icon{display:block;}
+// .apc-selector .item.c>.logo .icon{border-color:#FFF;background:$color_one;stroke:#FFF;}
+
+.apc-selector.user .C.list .item{ width:rem(90);height:rem(120);margin:10px; }
+.apc-selector.user .C.list .item .fn{display:block;height:auto;padding-left:rem(2);font-size:rem(16);text-align:center;letter-spacing:rem(2);line-height:2;}
+.apc-selector .C.cover .item{ width:rem(125);height:rem(187.5);margin:10px; }
+.apc-selector .C.video .item{ width:rem(275);height:rem(154);margin:10px; }
+.apc-selector .C.video .item .rename{opacity:1;position:absolute;bottom:50%;left:50%;transform:translate(-50%,50%);cursor:pointer;}
+.apc-selector.cover .C .item .rename{bottom:0;left:0;transform:none;cursor:pointer;}
+// .apc-selector .C.cover .f{ width:rem(100);height:rem(150);margin:10px; }
+.apc-selector .C.illustration .f{ width:rem(500);height:rem(210);border:0; }
+.apc-selector .C.illustration .add{width:rem(210);height:rem(210);}
+// .apc-selector .C .ff{cursor:pointer;position:relative;float:left;width:rem(275);height:rem(60);margin:rem(10);border:1px solid #DDD;}
+// .apc-selector .C .ff.add{border:0;}
+// .apc-selector .C .ff.vl,.apc-selector .C.audio .ff.al{border-color:#AAD010;}
+.apc-selector .C .ff.vm{border-color:#2A8BBE;}
+// .apc-selector .C .ff.vs,.apc-selector .C.audio .ff.as{border-color:#FF7F00;}
+.apc-selector .C .ff.vl.c,.apc-selector .C.audio .ff.al.c{background:#AAD010;}
+// .apc-selector .C .ff.vm.c{background:#2A8BBE;}
+// .apc-selector .C .ff.c{}
+.apc-selector .C .ff.vs.c,.apc-selector .C.audio .ff.as.c{background:#FF7F00;}
+// .apc-selector .C .ff.c{color:#FFF;border-color:transparent;background:$color_one;}
+// .apc-selector .C .ff.c path{fill:#FFF;}
+// .apc-selector .C .ff>u{position:absolute;top:rem(10);left:rem(10);width:rem(20);height:rem(20);}
+// .apc-selector .C .ff>i{position:absolute;top:rem(12);left:rem(40);font-size:rem(18);}
+.apc-selector .C .file~.text{display:inline-block;width:rem(300);}
+// .apc-selector u.bar { top: 50%; }
+.apc-selector .add { display:block;border:1px dashed #DDD;background:none;}
+// .apc-selector .add:hover{outline:0 !important;box-shadow:0 0 0 !important;}
+.apc-selector .add .icon{position:absolute;top:50%;left:50%;width:rem(75);height:rem(100);transform:translate(-50%,-50%);fill:$color_one;}
+.apc-selector .add .icon:after{content:"添加文件";position:absolute;bottom:rem(15);left:0;width:100%;font-size:rem(16);letter-spacing:rem(2);text-align:center;fill:$color_one;}
+.apc-selector .video .add .icon:after{content:"添加视频"}
+.apc-selector .image .add .icon:after{content:"添加图片"}
+.apc-selector .audio .add .icon:after{content:"添加音频"}
+.apc-selector .cover .add .icon:after{content:"添加封面"}
+.apc-selector .user .add .icon:after{content:""}
+.apc-selector .doc .add .icon:after{content:"添加文档"}
+.apc-selector .add:active{background:$color_one;border-color:transparent}
+.apc-selector .add:active .icon{fill:#FFF;color:#FFF;}
+.apc-selector .user .add{border:0;}
+.apc-selector .user .add .logo{border:1px dashed #ddd;}
+.apc-selector .user .add .icon{position:relative;top:0;left:0;width:rem(50);height:rem(50);transform:none;}
+.apc-selector .user .add:active{background:none;}
+.apc-selector .user .add:active .logo{border:0;background:$color_one;fill:#FFF;}
+
+// .apc-selector .C .item.add u{width:rem(150);height:rem(50);}
+// .apc-selector .C .item.add u:after{bottom:rem(18);padding-left:rem(20);font-size:rem(20);}
+// .apc-selector .C .item.add u svg{height:100%;}
+
+
+// .apc-selector .C .item:hover { cursor:pointer;outline:1px solid #DDD;box-shadow:0 0 10px #DDD;transform:scale(1.05); }
+.apc-selector .C .item:hover .x1 { transform:scale(.6); }
+.apc-selector .C .item:hover .x1:hover{background:#E60000;}
+
+
+.apc-selector .mo{display:block;position:relative;width:rem(1200);margin:0 auto;}
+.apc-selector .mo i{display:inline-block;padding:rem(12) rem(10);font-size:rem(16);color:#999;}
+// .apc-selector .mo .submit{display:inline-block;width:rem(120);padding:rem(10) 0 rem(10) rem(2);text-align:uc;letter-spacing:rem(2);font-size:rem(20);border-radius:rem(3);}
+// .apc-selector .mo .submit:active{color:#FFF;background:$color_one;}
+.apc-selector .prev,.apc-selector .next{position:absolute;top:0;right:0;width:rem(40);height:rem(40);border:1px solid transparent;border-radius:rem(50);background:rgba(255,255,255,.75);}
+.apc-selector .prev{right:rem(50);}
+.apc-selector .prev u,.apc-selector .next u{display:block;width:rem(40);height:rem(40);padding:rem(10);transform:rotate(90deg);fill:$color_one;}
+.apc-selector .prev u{transform:rotate(-90deg)}
+.apc-selector .prev:active,.apc-selector .next:active{background:$color_one;}
+.apc-selector .prev:active u,.apc-selector .next:active u{fill:#FFF;}
+
+
+.apc-selector .C.org .item{ /*float:none;*/width:20%;height:rem(40);margin:0 auto;padding:rem(8) rem(10) rem(8) rem(35);outline:0;box-shadow:0 0 0;}
+.apc-selector .C.org .mlist.c .item{opacity:.1}
+.apc-selector .C.org .mlist.c .item.c{opacity:1}
+// .apc-selector .C.service .mOrg .icon{top:rem(15);left:rem(15);width:rem(50);height:rem(50);padding:rem(5);border-radius:rem(5);background:#FFF;}
+.apc-selector .C.org .mOrg .name{font-size:rem(14);line-height:2;@extend %text_overflow;}
+.apc-selector .C.org .mOrg.c .name{color:$color_one;}
+.apc-selector .C.org .mOrg .to{position:absolute;top:0;left:0;width:100%;height:100%;}
+.apc-selector .C.org .mOrg .to .icon{position:absolute;top:rem(13);left:rem(10);width:rem(16);height:rem(16);padding:0;border:1px solid #DDD;border-radius:rem(16);transform:none;fill:none;background:#FFF;}
+.apc-selector .C.org .mOrg.c .to .icon{border-color:#FFF;background:$color_one;fill:#FFF;}
+
+.apc-selector .C.org .L{padding-bottom:rem(40)}
+
+@media screen and (max-width:2732px) and (-webkit-min-device-pixel-ratio:1.5) { //iPad Pro
+}
+@media screen and (max-width:2732px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro H 1366*1024
+}
+@media screen and (max-width:2048px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro V 1024*1366
+}
+@media screen and (max-width:2048px) and (-webkit-min-device-pixel-ratio:1.5) { // iPad
+}
+@media screen and (max-width:2048px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad H 1024*768
+}
+@media screen and (max-width:1536px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad V 768*1024
+}
+@media (min-resolution:200dpi), screen and (max-width:1440px) and (-webkit-min-device-pixel-ratio:1.5) and (orientation:portrait){ //Android 1440p 1440*2560
+// @media (min-resolution:250dpi), screen and (max-width:1440px) and (-webkit-min-device-pixel-ratio:1.5) and (orientation:portrait){ //Android 1440p 1440*2560
+}
+@media screen and (max-width:1080px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 1080p 1080*1920
+}
+@media screen and (max-width:828px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6+ 414
+}
+@media screen and (max-width:786px) and (-webkit-min-device-pixel-ratio:1.5){ //
+}
+@media screen and (max-width:768px) and (-webkit-min-device-pixel-ratio:1.5){ //iPad
+}
+@media screen and (max-width:750px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6 375
+}
+@media screen and (max-width:720px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 720p 720*1280
+}
+@media screen and (max-width:640px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone5 320
+}
+@media screen and (max-width:480px) and (-webkit-min-device-pixel-ratio:1.5){/*海信m20-t*/
+}
+
+

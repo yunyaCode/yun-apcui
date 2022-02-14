@@ -1,0 +1,60 @@
+﻿
+@import "variable";
+
+.C.apc-chat{background:#F5F5F5 !important;}
+.apc-chat .mlist{padding:0;@extend %clearfloat}
+.mChat{float:left;padding:rem(10);}
+.mChat.me{float:right;}
+.mChat .author{float:left;height:rem(20)}
+.mChat .author .icon {overflow:hidden;position:absolute;top:rem(10);left:rem(10);width:rem(30);height:rem(30);padding:rem(7);border-radius:rem(30);background-size:cover;fill:none;stroke:#CCC;stroke-width:rem(2);}
+.mChat .author .icon.default{border:1px solid #DDD;border-radius:rem(30);}
+.mChat .author .txt {display:block;padding:0 rem(10) 0 rem(40);font-size:rem(12);color:#999; }
+.mChat .time{float:left;padding-top:rem(1);color:#999;font-size:rem(10)}
+.mChat .time .n{font-size:rem(12)}
+.mChat .time.second:after{content:"秒前"}
+.mChat .time.minute:after{content:"分钟前"}
+.mChat .time.hour:after{content:"分钟前"}
+.mChat .content{clear:both;margin:0 rem(20) 0 rem(40);padding:rem(7);font-size:rem(14);line-height:1.5;border-radius:rem(5);border:1px solid #DDD;background:#FFF;}
+// .mlist .mO .mh .fn:active{background:red;}
+
+.mChat.me{float:right;}
+.mChat.me .author{float:right;}
+.mChat.me .author .icon{left:auto;right:rem(10);}
+.mChat.me .author .txt{padding:0 rem(40) 0 rem(10)}
+.mChat.me .time{float:right;}
+.mChat.me .content{margin:0 rem(40) 0 rem(20);border-color:$color_green}
+.mChat.me .content .icon{position:relative;top:rem(4);display:inline-block;width:rem(18);height:rem(18);margin:0 rem(2);fill:#FF7F00;}
+.mlist .mO .mh .fn .icon {overflow:hidden;position:absolute;top:rem(-5);left:rem(20);width:rem(30);height:rem(30);padding:rem(7);border-radius:rem(30);background-size:cover;fill:none;stroke:#CCC;stroke-width:rem(2);}
+.mlist .mO .mh .fn .icon.default{border:1px solid #DDD;border-radius:rem(30);}
+
+@media screen and (max-width:2732px) and (-webkit-min-device-pixel-ratio:1.5) { //iPad Pro
+}
+@media screen and (max-width:2732px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro H 1366*1024
+}
+@media screen and (max-width:2048px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro V 1024*1366
+}
+@media screen and (max-width:2048px) and (-webkit-min-device-pixel-ratio:1.5) { // iPad
+}
+@media screen and (max-width:2048px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad H 1024*768
+}
+@media screen and (max-width:1536px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad V 768*1024
+}
+@media (min-resolution:200dpi), screen and (max-width:1440px) and (-webkit-min-device-pixel-ratio:1.5) and (orientation:portrait){ //Android 1440p 1440*2560
+// @media (min-resolution:250dpi), screen and (max-width:1440px) and (-webkit-min-device-pixel-ratio:1.5) and (orientation:portrait){ //Android 1440p 1440*2560
+}
+@media screen and (max-width:1080px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 1080p 1080*1920
+}
+@media screen and (max-width:828px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6+ 414
+}
+@media screen and (max-width:786px) and (-webkit-min-device-pixel-ratio:1.5){ //
+}
+@media screen and (max-width:768px) and (-webkit-min-device-pixel-ratio:1.5){ //iPad
+}
+@media screen and (max-width:750px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6 375
+}
+@media screen and (max-width:720px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 720p 720*1280
+}
+@media screen and (max-width:640px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone5 320
+}
+
+

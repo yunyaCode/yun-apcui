@@ -1,0 +1,10 @@
+
+%clearfloat{
+  &:after {content: ""; display: table; clear: both; overflow: hidden; }
+}
+%center_flex{display: flex;justify-content: center;align-items: center;}
+%text_overflow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+%text_overflow2{word-break:break-all; text-overflow:ellipsis; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden;}
+%backdrop{-webkit-backdrop-filter:saturate(180%) blur(rem(20));backdrop-filter:saturate(180%) blur(rem(20))}
+%reflect{-webkit-box-reflect:below 1px -webkit-gradient(linear,0% 0%, 0% 100%,from(transparent), color-stop(0.95, transparent), to(rgba(255,255,255,0.1)));}
+

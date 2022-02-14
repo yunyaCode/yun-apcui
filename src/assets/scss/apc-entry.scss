@@ -1,0 +1,301 @@
+﻿
+@import "variable";
+
+
+.P.apc-entry .title{position:absolute;top:0;left:0;padding:rem(20);transform:scale(1);transform-origin:0 0;}
+.P.apc-entry .title .icon{display:block;position:relative;width:rem(40);height:rem(25);fill:$color_green;}
+.P.apc-entry .title .icon .LogoTxt{position:absolute;bottom:0;left:rem(45);width:rem(85);height:rem(20);}
+.P.apc-entry .title .txt{display:block;font-size:rem(18);line-height:2;color:$color_one;}
+
+.P.apc-entry.org .title .icon{display:block;width:rem(100);height:rem(100);margin:0;padding:rem(35);}
+.P.apc-entry.org .title .txt{position:absolute;top:rem(30);left:rem(80);font-size:rem(20);line-height:2;color:$color_one;}
+
+.P.apc-entry.org{top:0;height:100%;margin:0;}
+
+
+.A~.M.entry{background:rgba(0,0,0,.75) !important}
+.A~.M.entry .B{border:0;border-radius:rem(10);box-shadow:0 0 rem(20) rgba(#FFF,.5);}
+.M.entry{z-index:10000!important;background:#F5F5F5;}
+.M.entry .B{top:50% !important;left:50% !important;width:rem(800);height:rem(450);transform:translate(-50%,-50%) !important;box-shadow:0 0 rem(20) #EEE;border:1px solid #DDD;border-radius:rem(10);background:#FFF;}
+.M.entry.login .B{height:rem(400)}
+.M.entry.reg .B{height:rem(400)}
+// .M.entry.reg .B{height:rem(580)}
+.M.entry.reset .B{height:rem(500)}
+.M.entry.bindsns .B{height:rem(600)}
+.M.entry .L{padding:rem(60) 0;}
+
+
+.A~.M.entry .B.iB{transform:translate(-50%,-50%) scale(.9) !important;}
+.A~.M.entry .B.iC{transform:translate(-50%,-50%) !important;}
+
+// .apc-entry{background-image:url(../../../static/image/login_1080.jpg);background-size:auto rem(720);background-repeat:no-repeat;transition:background .8s,transform .4s,opacity .4s;}
+// .apc-entry.login{background-position:rem(-1850) 0;}
+// .apc-entry.reg,.apc-entry.reset,.apc-entry.bindsns{background-position:rem(-2170) 0;}
+// .apc-entry .C.intro{z-index:2;background-image:url(../../../static/image/login_1080.jpg);background-size:auto rem(720);background-repeat:no-repeat;transition:all .8s}
+// .apc-entry.login .C.intro{background-position:rem(-640) 0;transform:translate(100%);}
+// .apc-entry.reg .C.intro,.apc-entry.reset .C.intro,.apc-entry.bindsns .C.intro{background-position:rem(-320);transform:none;}
+// .apc-entry:before,.apc-entry:after{content:"";position:absolute;top:0;left:0;width:50%;height:100%;}
+// .apc-entry:before{filter:blur(20px)}
+// .apc-entry:before{background-image:url(login1.jpg);background-position:rem(-2776) 0;background-size:cover;background-repeat:none;}
+// .apc-entry>.C{width:50%;background-color:rgba(255,255,255,.5)}
+// .apc-entry>.C .H{height:rem(50);background:none;backdrop-filter:none;}
+// .apc-entry>.C .U{transition:all .8s !important;width:100%;}
+// .apc-entry.login>.C.reg .U,.apc-entry.login>.C.reset .U,.apc-entry.login>.C.apc-bindsns .U{transform:translate(-100%,0) !important}
+// .apc-entry.reg>.C.login .U,.apc-entry.reset>.C.login .U,.apc-entry.bindsns>.C.login .U{transform:translate(100%,0) !important}
+
+// .apc-entry.login>.C.reg .U,.apc-entry.login>.C.reset .U{animation:cl .8s}
+// .apc-entry.reg>.C.login .U,.apc-entry.reset>.C.login .U{animation:cr .8s}
+// .apc-entry.reg>.C.reg .U,.apc-entry.login>.C.login .U,.apc-entry.bindsns>.C.apc-bindsns .U{transform:none !important;}
+// .apc-entry.reg>.C.reg .U,.apc-entry.reset>.C.reset .U,.apc-entry.bindsns>.C.apc-bindsns .U{animation:lc .8s;}
+// .apc-entry.login>.C.login .U{animation:rc .8s}
+.apc-entry .form{width:100%;height:auto;}
+.apc-entry .form .apc-input.s1{width:rem(280);}
+// .apc-entry .form .apc-input label{color:rgba(255,255,255,1);text-shadow:1px 1px 1px rgba(0,0,0,.5)}
+// .apc-entry .form .apc-input.t label{color:rgba(255,255,255,.3);text-shadow:0 0 0;}
+// .apc-entry .form .apc-input .text{color:#FFF;text-shadow:0 0 rem(10) rgba(255,255,255,.5)}
+// .apc-entry .form .apc-input .ph{color:rgba(255,255,255,.5);}
+// .apc-entry .form .apc-input .sms,.apc-entry .form .apc-input .reset{color:rgba(255,255,255,.5);background:rgba(0,0,0,.1);}
+.apc-entry .form .apc-input .sms:active,.apc-entry .form .apc-input .reset:active{color:#FFF;background:$color_one;}
+.apc-entry .form .apc-input .sms,.apc-entry .form .apc-input .img,.apc-entry .form .apc-input .reset{top:rem(0);width:rem(90);height:rem(28);border-radius:rem(3);}
+.apc-entry .form .apc-input .sms:before,.apc-entry .form .apc-input .img:before,.apc-entry .form .apc-input .reset:before{top:rem(7);}
+
+.apc-entry .C.login{transform:none !important;}
+.apc-entry .C.reg,.apc-entry .C.reset,.apc-entry .C.apc-bindsns{transform:translate(100%,0) !important;}
+.apc-entry.reg .C.reset,.apc-entry.reset .C.reg{display:none;}
+
+@keyframes lc{0% { transform:translateX(-100%); }100% { transform:none;}}
+@keyframes rc{0% { transform:translateX(100%); }100% { transform:none;}}
+// @keyframes cl{0% { transform:none; }100% {transform:translateX(-100%);}}
+// @keyframes cr{0% { transform:none; }100%{ transform:translateX(100%);}}
+
+
+
+.apc-entry .text{font-size:rem(20)};
+.apc-entry .pw .text,.apc-entry .smsValid .text{width:rem(160);};
+.apc-entry .o{/* display:flex;position:absolute;left:0;bottom:0; */width:100%;margin:0 auto;text-align:center;/* background:rgba(255,255,255,.95); */}
+// .apc-entry .o .apc-btn{width:auto;height:rem(25);margin-bottom:rem(10);color:#999;font-size:rem(12);letter-spacing:rem(2);background:none;}
+// .apc-entry .C.login .login,.apc-entry .C.reg .reg{height:rem(50);margin-bottom:rem(30);padding:rem(1) 0 0 rem(5);font-size:rem(20);color:$color_one;letter-spacing:rem(5);/* border:rem(5) solid transparent; */border-radius:rem(5);background:none;}
+.apc-entry .C.login .login,.apc-entry .C.reg .reg,.apc-entry .C.reset .reset{left:0;width:rem(280);margin:0 auto rem(30);color:#FFF;font-size:rem(16);letter-spacing:rem(2);background:$color_one;}
+.apc-entry .C.login .reg,.apc-entry .C.reg .login,.apc-entry .C.reset .login{width:rem(180);height:rem(30);margin:rem(10) auto;padding:0;color:#999;letter-spacing:rem(1);font-size:rem(14);background:#F5F5F5;}
+.apc-entry .C.login .reg:active,.apc-entry .C.reg .login:active,.apc-entry .C.reset .login:active{color:#FFF;background:#999;}
+// .apc-entry .C.login .reset{display:block;left:rem(-90);width:rem(100);margin:rem(10) auto;color:rgba(255,255,255,.75);line-height:rem(30);}
+.apc-entry .C.login .login:before{content:"账号登录"}
+.apc-entry .C.login .reg:before{content:"没有账号？手机直接登 >"}
+.apc-entry .C.login .guest{display:none;}
+.apc-entry .C.login .guest:before{content:"随便看看"}
+.apc-entry .C.reg .reg:before{content:"手机登录"}
+.apc-entry .C.reg.org .U .L .reg:before{content:"注册学校"}
+.apc-entry .C.reg .login:before{content:"使用账号登录"}
+.apc-entry .C.reset .login:before{content:"返回登录"}
+.apc-entry.bind .C.login .login,.apc-entry.bind .C.reg .reg{left:0;width:rem(280);}
+// .apc-entry.bind .C.login .login:before{content:"登录新芽帐号，完成绑定"}
+// .apc-entry.bind .C.reg .reg:before{content:"注册新芽，完成账号绑定"}
+.apc-entry.bind .C.reg .reg:before{content:"验证手机，完成绑定"}
+.apc-entry .L .bindsns{display:none;position:absolute;bottom:0;left:50%;width:rem(466);height:rem(50);margin:rem(10) auto;transform:translate(-50%,0)}
+.apc-entry .L .bindsns:before{display:none;content:"— 支持社交账号，快速登录 —";position:absolute;top:rem(-30);left:0;width:100%;text-align:center;font-size:rem(12)}
+.apc-entry .L .bindsns .apc-btn{display:inline-block;width:rem(50);height:rem(50);margin:0 rem(20);cursor:default;border-radius:rem(50);border:1px solid transparent;}
+.apc-entry .L .bindsns .apc-btn .icon{position:absolute;top:50%;left:50%;width:rem(30);height:rem(30);padding:rem(5);transform:translate(-50%,-50%);}
+// .apc-entry .L .bindsns .apc-btn path{fill:rgba(255,255,255,.1);fill:#EEE;}
+.apc-entry .L .bindsns .apc-btn.c{cursor:pointer;}
+// .apc-entry .L .bindsns .apc-btn.c path{fill:rgba(255,255,255,.5);}
+
+.apc-entry .C .H:before{display:none;}
+.apc-entry .C .o>.apc-btn:active:after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.1)}
+// .apc-entry .L .bindsns .apc-btn.c:hover path{fill:#4097D4;}
+// .apc-entry .L .bindsns .apc-btn.weibo:hover path:first-child{fill:#FFF;}
+// .apc-entry .L .bindsns .apc-btn.weibo:hover path:nth-child(2){fill:#D52B2A;}
+// .apc-entry .L .bindsns .apc-btn.weibo:hover path:nth-child(3){fill:#E89214;}
+// .apc-entry .L .bindsns .apc-btn.weibo:hover path:nth-child(4){fill:#040000;}
+.apc-entry .L .bindsns .apc-btn.alipay .icon{width:rem(26);height:rem(26)}
+.apc-entry .L .bindsns .apc-btn.weibo .icon{width:rem(30);height:rem(24)}
+.apc-entry .L .bindsns .apc-btn.weibo path:first-child{fill:#AAA;}
+.apc-entry .L .bindsns .apc-btn.weibo path:first-child{fill:#FFF;}
+.apc-entry .L .bindsns .apc-btn.qq .icon{width:rem(24);height:rem(24)}
+.apc-entry .L .bindsns .apc-btn:active{background:none;fill:inherit}
+// .apc-entry .L .bindsns .apc-btn:active path{fill:inherit;}
+// .apc-entry .L .bindsns .apc-btn.c:active{color:#FFF;background:$color_one;}
+.apc-entry .L .bindsns .apc-btn.c:active path{fill:inherit !important;}
+.apc-entry .L .bindsns .apc-btn.weibo:active path:first-child{fill:#AAA !important;}
+.apc-entry .L .bindsns .apc-btn.weibo:active path:first-child{fill:#FFF !important;}
+body>.app .apc-entry .L .bindsns{height:rem(30);text-align:center;}
+body>.app .apc-entry .L .bindsns .apc-btn{display:none;width:auto;height:rem(30);line-height:rem(30);color:#999;padding:0 rem(10) 0 rem(30);border-radius:rem(5);}
+body>.app .apc-entry .L .bindsns .apc-btn .icon{top:rem(4);left:rem(4);width:rem(20);height:rem(20);transform:none;}
+body>.dd .apc-entry .L .bindsns .apc-btn.dd,
+body>.alipay .apc-entry .L .bindsns .apc-btn.alipay,
+// body>.wechat .apc-entry .L .bindsns .apc-btn.wechat,
+body>.weibo .apc-entry .L .bindsns .apc-btn.weibo,
+body>.qq .apc-entry .L .bindsns .apc-btn.qq{display:inline-block;font-size:rem(12);letter-spacing:rem(1);color:#CCC}
+body>.dd .apc-entry .L .bindsns .apc-btn.dd:after{content:"钉钉快速登录";color:#4097D4;}
+body>.alipay .apc-entry .L .bindsns .apc-btn.alipay:after{content:"支付宝快速登录";color:#1E95D4;}
+body>.wechat .apc-entry .L .bindsns .apc-btn.wechat:after{content:"微信快速登录";color:#B2E34B;}
+body>.weibo .apc-entry .L .bindsns .apc-btn.weibo:after{content:"微博快速登录";color:#D52B2A;}
+body>.qq .apc-entry .L .bindsns .apc-btn.qq:after{content:"QQ快速登录";color:$color_one;}
+.apc-entry.bind .title,.apc-entry.bind .bindsns,.apc-entry.bind .o .reset,.apc-entry.bind .o .login{display:none;}
+.apc-entry.bind .user{display:block;}
+.apc-entry.bind .user .icon{display:block;width:rem(60);height:rem(60);margin:0 auto;padding:rem(15);border:1px solid #FFF;border-radius:rem(120);background-position:center;background-size:cover;fill:none;stroke:#000;stroke-width:rem(1);background-color:#F5F5F5}
+.apc-entry.bind .user .txt{display:block;padding:rem(20);margin:0 auto;font-size:rem(16);text-align:center;}
+.apc-entry.bind .user .txt .fn{padding:0 rem(5);font-size:inherit;color:$color_green;}
+.apc-entry.bind .apc-toast{width:rem(200);height:rem(200);font-size:rem(20);margin:rem(-100) 0 0 rem(-100);text-align:center;}
+.apc-entry.bind .apc-toast .icon{display:block;width:rem(80);height:rem(80);margin:rem(20) auto rem(45);padding:rem(0);border:1px solid #AAD010;border-radius:rem(100);fill:#AAD010;}
+.apc-entry.bind .apc-toast .icon:after{content:"绑定成功";position:relative;top:rem(10);left:rem(-40);display:block;width:rem(160);color:#AAD010;letter-spacing:rem(5);font-size:rem(20);text-align:center;}
+.apc-entry.bind .apc-toast.fail .icon:after{content:"绑定失败";color:#E60000;}
+.apc-entry.bind .apc-toast .txt{display:block;margin:rem(10) auto;font-size:rem(16);color:#999;text-align:center;line-height:2;}
+.apc-entry.bind .apc-toast .txt:after{content:"正在登入";letter-spacing:rem(2)}
+.apc-entry.bind .apc-toast.fail .icon{fill:#E60000;border-color:#E60000;}
+.apc-entry.bind .apc-toast.fail .txt:after{content:"正在返回";}
+.apc-entry.bind .apc-toast.exist{height:rem(240);margin-top:rem(-120);animation:none;opacity:1;}
+.apc-entry.bind .apc-toast.exist .txt:before{content:"该账号已被";padding-right:rem(5);letter-spacing:rem(2)}
+.apc-entry.bind .apc-toast.exist .txt:after{content:"绑定";padding-left:rem(5);letter-spacing:rem(2)}
+.apc-entry.bind .apc-toast.exist .to{height:rem(30);margin:0 rem(50);font-size:rem(16);line-height:rem(16)}
+// .apc-entry .L .bindsns .apc-btn path{fill:#CCC}
+// .apc-entry .o .reset{width:auto;background:none;}
+
+// .apc-entry .o .reset:active{color:#FFF;background-color:#E60000;}
+// .apc-entry .o .reset:before{content:"";position:absolute;top:rem(15);left:0;width:1px;height:rem(20);background:#DDD;}
+
+
+// .apc-entry.bindsns .C{top:rem(60);width:100%;height:rem(440)}
+// .apc-entry.bindsns iframe{display:block;width:rem(700);height:100%;margin:0 auto;border:1px solid #DDD;border-radius:rem(5);}
+
+.apc-entry .C.reg.org .reg:before{content:"创建学校"}
+.apc-entry .C.reg.org .label:after{content:"创建学校"}
+
+
+
+  .apc-entry.reg{}
+  .apc-entry>.C{width:100%;}
+
+  .apc-entry .C.reg, .apc-entry .C.reset, .apc-entry .C.apc-bindsns{transform:none !important;}
+  .M .P.apc-entry>.C .U{transform:none !important;animation:none !important}
+  .apc-entry.reg .C.login,.apc-entry.reset .C.login,.apc-entry.bindsns .C.login{transform:translate(-100%) !important;}
+
+  .apc-entry .C.login.iR-leave-active,.apc-entry .C.reg.iR-leave-active,.apc-entry .C.reset.iR-leave-active,.apc-entry .C.apc-bindsns.iR-leave-active {
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  .apc-entry .C.login.iR-leave-to,.apc-entry .C.reg.iR-leave-to,.apc-entry .C.reset.iR-leave-to,.apc-entry .C.apc-bindsns.iR-leave-to {
+    transform: translate3d(-100%, 0, 0) !important;
+  }
+
+  .apc-entry .C.login.iR-enter-active,.apc-entry .C.reg.iR-enter-active,.apc-entry .C.reset.iR-enter-active,.apc-entry .C.apc-bindsns.iR-enter-active {
+    transform: translate3d(100%, 0, 0) !important;
+  }
+
+  .apc-entry .C.login.iR-enter-to,.apc-entry .C.reg.iR-enter-to,.apc-entry .C.reset.iR-enter-to,.apc-entry .C.apc-bindsns.iR-enter-to{
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  .apc-entry .C.login.iL-leave-active,.apc-entry .C.reg.iL-leave-active,.apc-entry .C.reset.iL-leave-active,.apc-entry .C.apc-bindsns.iL-leave-active{
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  .apc-entry .C.login.iL-leave-to,.apc-entry .C.reg.iL-leave-to,.apc-entry .C.reset.iL-leave-to,.apc-entry .C.apc-bindsns.iL-leave-to {
+    transform: translate3d(100%, 0, 0) !important;
+  }
+
+  .apc-entry .C.login.iL-enter-active,.apc-entry .C.reg.iL-enter-active,.apc-entry .C.reset.iL-enter-active,.apc-entry .C.apc-bindsns.iL-enter-active {
+    transform: translate3d(-100%, 0, 0) !important;
+  }
+
+  .apc-entry .C.login.iL-enter-to,.apc-entry .C.reg.iL-enter-to,.apc-entry .C.reset.iL-enter-to,.apc-entry .C.apc-bindsns.iL-enter-to {
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+.selector .apc-entry .H:before{display:block;}
+.selector .apc-entry .H .txt:before{content:"登录丁税宝"}
+.selector .apc-entry .L{padding-top:rem(80)}
+.selector .apc-entry .C.login .login:before{content:"登录丁税宝"}
+.selector .apc-entry .C.login .login:after{content:"使用你要绑定的丁税宝虚拟组织管理员账号";position:absolute;bottom:rem(-45);left:0;width:100%;color:#999;font-size:rem(12);text-align:center;letter-spacing:rem(1)}
+
+
+.M.entry.login .B{height:rem(450);}
+.A ~ .M.entry.login .B{height:rem(450) !important;}
+.apc-input.repw{margin-bottom:rem(50);}
+.apc-input.repw .tip{display:block;padding:rem(10) rem(5);text-align:center;color:#FAAD14;}
+.apc-input.repw .tip:before{content:"密码不能纯数字或纯字母";}
+.C.admin .apc-input.repw .tip:before{content:"管理员密码需要包含大小写字母、数字和符号";}
+.C.weak .form:before{display:block;content:"密码不能纯数字或纯字母，请重新设置";width:rem(220);margin:0 auto;padding:rem(5) rem(10);color:#FFF;text-align:center;border-radius:rem(20);background:#FAAD14;}
+.C.admin.weak .form:before{content:"管理员要求强密码，请重新设置";}
+
+
+@media screen and (max-width:2560px) { // Web
+}
+@media screen and (max-width:1920px) { // Web
+}
+@media screen and (max-width:1600px) { // Web
+}
+@media screen and (max-width:1366px) { // Web
+  // .apc-entry,.apc-entry .C.intro{background-image:url(../../../static/image/login_720.jpg);}
+}
+@media screen and (max-width:1280px) { // Web
+
+}
+@media screen and (max-width:2732px) and (-webkit-min-device-pixel-ratio:1.5) { //iPad Pro
+}
+@media screen and (max-width:2732px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro H 1366*1024
+}
+@media screen and (max-width:2048px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro V 1024*1366
+}
+@media screen and (max-width:2048px) and (-webkit-min-device-pixel-ratio:1.5) { // iPad
+  .apc-entry .apc-checkbox{margin-left:rem(10);margin-right:rem(10);}
+  .apc-entry .o{padding:0 rem(20);}
+}
+@media screen and (max-width:2048px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad H 1024*768
+}
+@media screen and (max-width:1536px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad V 768*1024
+}
+@media screen and (max-width:1440px) and (orientation:portrait){ //Android 1440p 1440*2560
+// @media (min-resolution:250dpi), screen and (max-width:1440px) and (-webkit-min-device-pixel-ratio:1.5) and (orientation:portrait){ //Android 1440p 1440*2560
+
+  // .A .M.entry{background:rgba(0,0,0,.5)}
+  .A~.M.entry .B{height:85% !important;box-shadow:0 0 0;}
+  .A~.M.entry.login .B{height:rem(400) !important;}
+  .A~.M.entry.reg .B{height:85% !important;}
+  .A~.M.entry.reset .B{height:rem(450) !important;}
+  .M.entry{background:#F5F5F5;}
+  .M.entry .B{top:0 !important;left:0 !important;width:100%;height:100% !important;transform:none !important;box-shadow:0 0 0;border:0;border-radius:0;}
+  .A~.M.entry .B.iU{transform:translateY(-100%) !important;}
+  .A~.M.entry .B.iC{transform:none !important;}
+  // .M.entry.login .B{height:rem(400)}
+  // .M.entry.reg .B{height:rem(580)}
+  // .M.entry.reset .B{height:rem(500)}
+  // .M.entry.bindsns .B{height:rem(600)}
+  .M.entry .L{padding:rem(60) 0;}
+  .M.entry .bind .L{padding:rem(40) 0;}
+}
+@media screen and (max-width:1080px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 1080p 1080*1920
+
+
+  // .P.apc-entry .form{position:absolute;top:auto;bottom:0;transform:none;}
+  // .Android .P.apc-entry .form{position:relative;top:rem(50);bottom:auto;transform:none;}
+  .Android .P.apc-entry .L .bindsns{position:relative;top:rem(-70);bottom:rem(0);width:100%;text-align:center;}
+  .P.apc-entry.bind .U{overflow:auto;z-index:20;}
+  // .P.apc-entry.bind .form{top:0;bottom:auto;}
+  .apc-entry .C.login .login, .apc-entry .C.reg .reg, .apc-entry .C.reset .reset{left:0;width:100%;border-radius:rem(50)}
+  .apc-entry .C.login .reg, .apc-entry .C.reg .login, .apc-entry .C.reset .login{margin:rem(30) auto;}
+  // .apc-entry .C.login .login{margin-bottom:rem(70);}
+  .apc-entry .L .bindsns{display:block;width:100%;}
+  .apc-entry .L .bindsns .apc-btn{width:33.3%;margin:0;border:0;font-size:rem(10);}
+  .apc-entry .L .bindsns:before{color:#DDD;}
+  // .apc-entry .L .bindsns .apc-btn{margin:0 rem(5)}
+
+  // .apc-entry .reg .form{position:relative;top:rem(50);bottom:auto;}
+
+
+}
+@media screen and (max-width:828px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6+ 414
+}
+@media screen and (max-width:786px) and (-webkit-min-device-pixel-ratio:1.5){ //
+}
+@media screen and (max-width:768px) and (-webkit-min-device-pixel-ratio:1.5){ //iPad
+}
+@media screen and (max-width:750px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6 375
+}
+@media screen and (max-width:720px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 720p 720*1280
+}
+@media screen and (max-width:640px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone5 320
+  // .apc-entry .L .bindsns .apc-btn{margin:0 rem(3)}
+}
+
+
+

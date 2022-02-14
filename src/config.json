@@ -1,0 +1,70 @@
+[
+  {
+    "name": "bar",
+    "desc": "进度条"
+  },
+  {
+    "name": "btn",
+    "desc": "按钮"
+  },
+  {
+    "name": "checkbox",
+    "desc": "单（复）选框"
+  },
+  {
+    "name": "calendar",
+    "desc": "日历"
+  },
+  {
+    "name": "input",
+    "desc": "输入框"
+  },
+  {
+    "name": "load",
+    "desc": "上下拉加载（刷新）"
+  },
+  {
+    "name": "loading",
+    "desc": "加载动画"
+  },
+  {
+    "name": "m",
+    "desc": "弹窗"
+  },
+  {
+    "name": "star",
+    "desc": "打星"
+  },
+  {
+    "name": "switch",
+    "desc": "切换"
+  },
+  {
+    "name": "toast",
+    "desc": "提示"
+  },
+  {
+   "name":"textarea",
+   "desc":"文本域"
+  },
+  {
+    "name": "map",
+    "desc": "地图（获取地址）"
+  },
+  {
+    "name": "region",
+    "desc": "联动"
+  },
+  {
+    "name": "video",
+    "desc": "视频播放器"
+  },
+  {
+    "name":"time",
+    "desc":"时间"
+  },
+  {
+    "name":"switcher",
+    "desc":"切换按钮"
+  }
+]

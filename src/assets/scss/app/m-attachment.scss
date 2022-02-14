@@ -1,0 +1,78 @@
+﻿
+@import "../variable";
+
+.M.attachment.preview .B{top:0;left:50%;width:rem(700);height:100%;transform:translateX(-50%)}
+
+.M.attachment.preview .B.iB{width:0;height:100% !important;transform:none !important;}
+.M.attachment.preview .B.iC{width:rem(1000);transform:translateX(-50%) !important}
+
+// .M.attachment.preview.doc .B.iC{width:rem(1000);}
+// .M.attachment.preview.docx .B.iC{width:rem(1000);}
+// .M.attachment.preview.ppt .B.iC{width:rem(1000);}
+// .M.attachment.preview.pptx .B.iC{width:rem(1000);}
+
+.M.attachment.preview .P{position:relative;height:100%;}
+.M.attachment.preview .P .H{width:auto;background:none;}
+.M.attachment.preview .P .H .txt{display:none;}
+.M.attachment.preview .P .H .download{display:none;position:absolute;top:rem(10);left:rem(10);width:rem(80);height:rem(40);font-size:rem(14);@extend %center_flex;color:#FFF;border-radius:rem(5);background:$color_one;}
+.M.attachment.preview .P .H .download:after{content:"下载";}
+.M.attachment.preview .P .H .download .icon{display:inline-block;width:rem(20);height:rem(20);padding:rem(2);margin-right:rem(5);fill:#FFF;}
+.M.attachment.preview .P .N{display:none;text-align:center;background:none;}
+.M.attachment.preview .P .N .apc-btn{display:inline-block;letter-spacing:0;height:rem(30);padding:0 rem(10);font-size:rem(16);line-height:rem(30);}
+.M.attachment.preview .P .N .apc-btn.prev:before{content:"上一页";}
+.M.attachment.preview .P .N .apc-btn.next:before{content:"下一页";}
+.M.attachment.preview .P .N .page{margin:0 rem(10);font-size:rem(16);}
+.M.attachment.preview .P .N .page .n{font-size:rem(16)}
+// .M.attachment.preview .P .H{width:auto;}
+.M.attachment.preview .P .H>.txt:before{content:"附件预览";}
+
+.M.attachment.preview .P .U{padding:rem(20)}
+.M.attachment.preview .P .L{height:100%;}
+.M.attachment.preview .P .content{width:100%;margin:0 auto;height:100% !important;/*height:rem(640);*/border:1px solid #EEE !important;}
+.M.attachment.preview .P .content pre{padding:rem(10);line-height:2;word-wrap: break-word; white-space: pre-wrap;}
+// .M.attachment.preview.doc .P .content{width:rem(880);/*height:rem(600);*/}
+// .M.attachment.preview.docx .P .content{width:rem(880);/*height:rem(600);*/}
+
+.M.attachment.preview .P .H .download{display:flex;}
+
+@media screen and (max-width:2732px) and (-webkit-min-device-pixel-ratio:1.5) { //iPad Pro
+}
+@media screen and (max-width:2732px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro H 1366*1024
+}
+@media screen and (max-width:2048px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad Pro V 1024*1366
+}
+@media screen and (max-width:2048px) and (-webkit-min-device-pixel-ratio:1.5) { // iPad
+}
+@media screen and (max-width:2048px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) { // iPad H 1024*768
+}
+@media screen and (max-width:1536px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) { // iPad V 768*1024
+}
+@media screen and (max-width:1440px) and (orientation:portrait){ //Android 1440p 1440*2560
+  .M.attachment.preview .B{left:auto;right:0;width:100%;transform:none !important}
+  .M.attachment.preview .B.iR{width:100%;}
+  .M.attachment.preview .B.iC{left:0;width:100%;transform:none !important}
+
+  .M.attachment.preview .P .N{top:auto;bottom:0;height:rem(50);padding:0 rem(10) 0 0;line-height:rem(50);text-align:right;background:rgba(255,255,255,.95)}
+  .M.attachment.preview .P .N:before{display:none;}
+
+  .M.attachment.preview .P .content{width:100% !important;border:0;}
+
+  // .M.attachment.preview .P .content{width:rem(640);height:rem(905);margin:rem(60) 0;background:red;}
+  .M.attachment.preview .P .H .download{position:fixed;top:auto;left:auto;bottom:rem(5);right:0;transform:scale(.75);}
+}
+@media screen and (max-width:1080px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 1080p 1080*1920
+}
+@media screen and (max-width:828px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6+ 414
+}
+@media screen and (max-width:786px) and (-webkit-min-device-pixel-ratio:1.5){ //
+}
+@media screen and (max-width:768px) and (-webkit-min-device-pixel-ratio:1.5){ //iPad
+}
+@media screen and (max-width:750px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone6 375
+}
+@media screen and (max-width:720px) and (-webkit-min-device-pixel-ratio:1.5){ // Android 720p 720*1280
+}
+@media screen and (max-width:640px) and (-webkit-min-device-pixel-ratio:1.5){ // iPhone5 320
+}
+
+

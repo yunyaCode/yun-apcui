@@ -1,0 +1,91 @@
+[
+  {
+    "name": "bar",
+    "desc": "进度条"
+  },
+  {
+    "name": "btn",
+    "desc": "按钮"
+  },
+  {
+    "name": "carousel",
+    "desc": "轮播图"
+  },
+  {
+    "name": "calendar",
+    "desc": "日历"
+  },
+  {
+    "name": "checkbox",
+    "desc": "单（复）选框"
+  },
+  {
+    "name": "clip",
+    "desc": "裁剪"
+  },
+  {
+    "name": "fold",
+    "desc": "折叠"
+  },
+  {
+    "name": "input",
+    "desc": "输入框"
+  },
+  {
+    "name": "load",
+    "desc": "上下拉加载（刷新）"
+  },
+  {
+    "name": "loading",
+    "desc": "加载动画"
+  },
+  {
+    "name": "m",
+    "desc": "弹窗"
+  },
+  {
+    "name": "star",
+    "desc": "打星"
+  },
+  {
+    "name": "switch",
+    "desc": "切换"
+  },
+  {
+    "name": "tree",
+    "desc": "树"
+  },
+  {
+    "name": "toast",
+    "desc": "提示"
+  },
+  {
+   "name":"textarea",
+   "desc":"文本域"
+  },
+  {
+    "name": "map",
+    "desc": "地图（获取地址）"
+  },
+  {
+    "name": "upload",
+    "desc": "上传"
+  },
+  {
+    "name": "region",
+    "desc": "联动"
+  },
+  {
+    "name": "video",
+    "desc": "视频播放器"
+  },
+  {
+    "name":"time",
+    "desc":"时间"
+  },
+
+  {
+    "name":"switcher",
+    "desc":"切换按钮"
+  }
+]
