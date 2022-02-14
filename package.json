@@ -1,7 +1,7 @@
 {
   "name": "apc-ui",
   "version": "1.0.9",
-  "description": "基于webpack4的apc-ui项目",
+  "description": "基于vue2的UI库",
   "main": "lib/apc-ui.umd.min.js",
   "files": [
     "lib/*"
@@ -18,7 +18,10 @@
     "package": "vue-cli-service build --target lib --dest lib src/index.js"
   },
   "keywords": [
-    "apc-ui"
+    "apc-ui",
+    "ui库",
+    "vue2",
+    "xss"
   ],
   "author": "yunya",
   "license": "MIT",
